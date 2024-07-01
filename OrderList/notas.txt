@@ -1,0 +1,7 @@
+ ojo! eso compila pero esta mal
+	lista[i].edad = lista[j].edad;
+
+esto tambien compila, pero esta mal:
+	aux = lista[j].dir.cp;
+        lista[j].dir.cp = lista[I].dir.cp;
+        lista[i].dir.cp =aux;

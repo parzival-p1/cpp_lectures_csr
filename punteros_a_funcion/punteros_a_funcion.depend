@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1718074224 source:c:\users\pacool\documents\programming\c++\punteros_a_funcion\main.cpp
+	<iostream>
+	"ejemplo3.h"
+
+1717984763 c:\users\pacool\documents\programming\c++\punteros_a_funcion\ejemplo2.h
+	<iostream>
+
+1718076677 c:\users\pacool\documents\programming\c++\punteros_a_funcion\ejemplo3.h
+	<iostream>
+

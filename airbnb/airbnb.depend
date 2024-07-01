@@ -1,0 +1,59 @@
+# depslib dependency file v1.0
+1709869074 source:c:\users\paco hdz\documents\programming\c++\airbnb\airbnb.cpp
+	"Airbnb.h"
+	"Guest.h"
+	"Host.h"
+
+1709862056 c:\users\paco hdz\documents\programming\c++\airbnb\airbnb.h
+	<iostream>
+	<string>
+	<stdio.h>
+	<stdlib.h>
+	"Host.h"
+	"Guest.h"
+	"GuestArrayList.h"
+	"Property.h"
+	"PropertyArrayList.h"
+
+1709783213 source:c:\users\paco hdz\documents\programming\c++\airbnb\guest.cpp
+	"Guest.h"
+
+1706583407 c:\users\paco hdz\documents\programming\c++\airbnb\guest.h
+	<iostream>
+	<string>
+
+1709854768 source:c:\users\paco hdz\documents\programming\c++\airbnb\host.cpp
+	"Host.h"
+
+1709854496 c:\users\paco hdz\documents\programming\c++\airbnb\host.h
+	<iostream>
+	<string>
+
+1706238062 source:c:\users\paco hdz\documents\programming\c++\airbnb\main.cpp
+	"Airbnb.h"
+
+1711423840 c:\users\paco hdz\documents\programming\c++\airbnb\propertyarraylist.h
+	<stdio.h>
+	<stdlib.h>
+	"Property.h"
+
+1709862003 c:\users\paco hdz\documents\programming\c++\airbnb\guestarraylist.h
+	<stdlib.h>
+	<stdio.h>
+	"Guest.h"
+
+1709864735 c:\users\paco hdz\documents\programming\c++\airbnb\property.h
+	<string>
+	<iostream>
+	"GuestArrayList.h"
+	"Host.h"
+
+1709854602 source:c:\users\paco hdz\documents\programming\c++\airbnb\property.cpp
+	"Property.h"
+
+1709862047 source:c:\users\paco hdz\documents\programming\c++\airbnb\guestarraylist.cpp
+	"GuestArrayList.h"
+
+1709869070 source:c:\users\paco hdz\documents\programming\c++\airbnb\propertyarraylist.cpp
+	"PropertyArrayList.h"
+

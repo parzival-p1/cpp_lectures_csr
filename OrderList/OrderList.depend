@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1711673836 source:c:\users\paco hdz\documents\programming\c++\orderlist\main.cpp
+	<stdio.h>
+	<iostream>
+

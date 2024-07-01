@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1705030697 source:c:\users\paco hdz\documents\programming\c++\cpp_basics\main.cpp
+	<iostream>
+	<string>
+	"puerta.h"
+
+1705030911 c:\users\paco hdz\documents\programming\c++\cpp_basics\puerta.h
+

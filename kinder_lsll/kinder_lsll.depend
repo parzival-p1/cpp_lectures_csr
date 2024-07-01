@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1700796286 source:/home/pacool/Documentos/Programming/C++/kinder_lsll/main.cpp
+	<cstdio>
+
+1702263212 source:c:\users\paco hdz\documents\programming\c++\kinder_lsll\main.cpp
+	<cstdio>
+	"interface.h"
+
+1702349318 c:\users\paco hdz\documents\programming\c++\kinder_lsll\interface.h
+	"simpleLinkedList.h"
+
+1702349701 c:\users\paco hdz\documents\programming\c++\kinder_lsll\simplelinkedlist.h
+	<string.h>
+

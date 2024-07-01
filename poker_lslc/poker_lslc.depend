@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1703820684 source:c:\users\paco hdz\documents\programming\c++\poker_lslc\main.cpp
+	<stdio.h>
+	"interface.h"
+
+1704769056 c:\users\paco hdz\documents\programming\c++\poker_lslc\interface.h
+	"list.h"
+	"arrayList.h"
+
+1704427708 c:\users\paco hdz\documents\programming\c++\poker_lslc\list.h
+	"simpleLinkedList.h"
+
+1704769191 c:\users\paco hdz\documents\programming\c++\poker_lslc\simplelinkedlist.h
+	<string.h>
+	<stdlib.h>
+	<time.h>
+
+1704766793 c:\users\paco hdz\documents\programming\c++\poker_lslc\arraylist.h
+

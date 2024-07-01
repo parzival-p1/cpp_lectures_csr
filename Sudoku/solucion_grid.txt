@@ -1,0 +1,23 @@
+funcion que revise row y column
+1. Cómo se que ese cuadro tengo que revisar?? 
+	puedo ejecutr reviewRow()  reviewColumn() para asegurarme que ese es el cuadro correto
+
+2. Cuales son sus limites? 
+	defino una variable const unsigned int limit  = 3; para establecer en limite del cuadro
+
+reviewGrid(int row, int column)
+{
+    int **grid;
+    const unsigned int limit = 3
+    int x;
+    int y;
+
+    reviewRow(row, column);
+    reviewColumn(row, column);
+    
+    for (i = 0; i < limit; ++i)
+        for (j = 0; j < limit; ++j)
+            if (sudoku[index][column] == missingNumbers[grid[x][y]])
+                missingNumbers[grid[x][y]] // algo falta aqui.
+            controlCount++;
+}               

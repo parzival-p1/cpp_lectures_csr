@@ -1,0 +1,45 @@
+# depslib dependency file v1.0
+1712287906 source:c:\users\paco hdz\documents\programming\c++\sudoku\main.cpp
+	<iostream>
+	"Sudoku.h"
+
+1715652092 c:\users\paco hdz\documents\programming\c++\sudoku\sudoku.h
+
+1715831371 source:c:\users\paco hdz\documents\programming\c++\sudoku\sudoku.cpp
+	"Sudoku.h"
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<cctype>
+
+1716262514 source:d:\programming\c++\sudoku\main.cpp
+	<iostream>
+	<fstream>
+	"sudoku.h"
+
+1716262406 d:\programming\c++\sudoku\sudoku.h
+
+1716262188 source:d:\programming\c++\sudoku\sudoku.cpp
+	"Sudoku.h"
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<cctype>
+
+1716518736 source:c:\users\pacool\documents\programming\c++\sudoku\main.cpp
+	<iostream>
+	<fstream>
+	"sudoku.h"
+
+1717126218 c:\users\pacool\documents\programming\c++\sudoku\sudoku.h
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<cstring>
+	<cctype>
+	<ctime>
+	<windows.h>
+
+1717126293 source:c:\users\pacool\documents\programming\c++\sudoku\sudoku.cpp
+	"Sudoku.h"
+

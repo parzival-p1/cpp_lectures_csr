@@ -2,6 +2,8 @@
 #define INSTRUCTIONLIST_H
 #include "Instruction.h"
 
+using namespace std;
+
 class InstructionList
 {
     public:

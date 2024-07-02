@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1719878814 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instarraylist.cpp
+	"InstArrayList.h"
+
+1719547286 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\instarraylist.h
+	<stdlib.h>
+	<stdio.h>
+	"Instruction.h"
+
+1719547232 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\instruction.h
+	<iostream>
+	<string>
+
+1719373410 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
+	"Instruction.h"
+
+1719879833 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instlinkedlist.cpp
+	"InstLinkedList.h"
+
+1719879732 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\instlinkedlist.h
+	"Instruction.h"
+
+1719890969 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\decoder.cpp
+	"Decoder.h"
+
+1719890152 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\decoder.h
+	<iostream>
+	<fstream>
+	<string>
+	<sstream>
+	"InstLinkedList.h"
+
+1719546173 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\main.cpp
+	<iostream>
+	"Simulator.h"
+
+1719891085 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
+	"Decoder.h"
+	<iostream>
+	<string>
+
+1719891219 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
+	"Simulator.h"
+

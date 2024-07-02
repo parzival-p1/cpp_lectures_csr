@@ -27,7 +27,7 @@ bool InstructionList::isEmpty()
 
 bool InstructionList::isFull()
 {
-    // Puedo hacer esto con un op ternario?? // last == MAX ? return true : return false;
+    //op ternario?? last == MAX ? return true : return false;
     if (last == MAX)
         return true;
     else
@@ -58,6 +58,10 @@ void InstructionList::resizeList()
 void InstructionList::insertLast()
 {
     // t a r e a
+    if (isFull())
+        resizeList();
+    List[last];
+    last++; 
 }
 
 void InstructionList::deleteFst()

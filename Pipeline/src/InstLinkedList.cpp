@@ -72,6 +72,6 @@ void InstructionList::print()
 {
     for (Instruction *aux = head; aux != NULL; aux = aux->GetNext())
     {
-        cout>>aux->print();
+        //cout<<aux->print();
     }
 }

@@ -16,8 +16,9 @@ class Simulator
     protected:
 
     private:
-        Decoder decoder(sFileName);
         string sFileName;
+        Decoder *decoder; // ptr no es obj
+        InstructionList List;
 };
 
 #endif // SIMULATOR_H

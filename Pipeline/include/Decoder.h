@@ -5,6 +5,9 @@
 #include <fstream>
 #include <string>
 #include <sstream>
+#include "InstLinkedList.h"
+
+using namespace std;
 
 class Decoder
 {

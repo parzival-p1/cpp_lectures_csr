@@ -35,13 +35,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Decoder.h" />
-		<Unit filename="include/InstArrayList.h" />
 		<Unit filename="include/InstLinkedList.h" />
 		<Unit filename="include/Instruction.h" />
 		<Unit filename="include/Simulator.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Decoder.cpp" />
-		<Unit filename="src/InstArrayList.cpp" />
 		<Unit filename="src/InstLinkedList.cpp" />
 		<Unit filename="src/Instruction.cpp" />
 		<Unit filename="src/Simulator.cpp" />

@@ -13,6 +13,7 @@ Decoder::~Decoder()
 bool Decoder::start(InstructionList &List)
 {
     ifstream file(sFileName);
+    string sLine, sWord;
 
     if (!file.is_open()) {
         cout<<"no se pudo abrir el archivo!";
@@ -20,10 +21,17 @@ bool Decoder::start(InstructionList &List)
     }
     else
     {
-        cout<<"Si abrio!";
-        // t a r e a: LEER EL ARCHIVO
+        while(getline(file, sLine))
+        {
+            istringstream ssConversion(sLine);
+            getline(ssConversion, sWord, ' ');
+            cout<<sWord<<endl;
+            getline(ssConversion, sWord, ' ');
+            cout<<sWord<<endl;
+            getline(ssConversion, sWord, ' ');
+            cout<<sWord<<endl;
+        }
         file.close();
         return true;
     }
 }
-

@@ -16,5 +16,4 @@ Simulator::~Simulator()
 void Simulator::run()
 {
     decoder->start(List);
-
 }

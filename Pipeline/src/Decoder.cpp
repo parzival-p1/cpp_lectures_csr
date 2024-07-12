@@ -10,15 +10,80 @@ Decoder::~Decoder()
     //dtor
 }
 
+/*
+ * Busca en el arr si es una palabra reservada o no
+ *
+ *
+ *
+*/
+
+bool Decoder::isReservedWord(string sWord)
+{
+    string validCmd [] = {"JMP", "MOV", "ADD", "SUB", "MUL", "AND", "OR", "XOR", "CMP"};
+    int i = 0;
+    bool found = false;
+
+    while (i < 8 && !found)
+    {
+        if(validCmd[i] == sWord)
+            found = true;
+        else
+            i++;
+    }
+    return found;
+}
+
+
+/*
+ * validar que exista el comando en el arr validCmd
+ * validar que el numero de palabras del cmd sean validas
+ * return: true si las 2 validaciones anteriores son ciertas
+ * return: false si las 2 previas validaciones previas
+*/
+
+bool Decoder::validComand(string sLine, int iCount)
+{
+    string sWord;
+    bool valid;
+    istringstream ssConversion(sLine);
+    getline(ssConversion, sWord, ' ');
+
+    if (iCount == 1 && !isReservedWord(sWord)) // valida que sea una etiqueta
+        valid = true;
+    else if () { // valida que el cmd sea JMP
+        // count == 2 palabras && es JMP todo bien
+    } else if () { // valida el resto de los cmds que existen
+        // que validCmd que sean 3 && que !JMP
+    }
+    else { // cacha todas las excepciones, todo lo que no cae arriba
+        // toodo lo que no esta bien!  ESTO ES UN PARSER!
+
+    }
+
+}
+
+/*
+* "MOV $EDX $ADX"
+* cuenta cuántas palabras hay en sLine
+* si hay un espacio he encontrado una palabra, y hasta llegar al final del str
+* return: numero de palabras
+*/
 int Decoder::wordCount(string sLine)
 {
-    // T A R E A
+    int len  = sLine.length(), icount = 0;
+
+    for (int i = 0; i < len; i++) {
+        if (sLine[i] == ' ')
+            icount++;
+    }
+    icount++;
+    return icount;
 }
 
 bool Decoder::start(InstructionList &List)
 {
     ifstream file(sFileName);
-    string sLine, sWord;
+    string sLine;
     int iCount;
 
     if (!file.is_open()) {
@@ -30,14 +95,10 @@ bool Decoder::start(InstructionList &List)
         while(getline(file, sLine))
         {
             iCount = wordCount(sLine);
-            cout<<"Se contaron: "<<iCount<<" palabras. "<<endl<<" En la linea: "<<sLine<<endl;
-            istringstream ssConversion(sLine);
-            getline(ssConversion, sWord, ' ');
-            cout<<sWord<<endl;
-            getline(ssConversion, sWord, ' ');
-            cout<<sWord<<endl;
-            getline(ssConversion, sWord, ' ');
-            cout<<sWord<<endl;
+            if (validComand(sLine, iCount))
+                cout<<"El comando fue valido!";
+            else
+                cout<<"El comando no existe o hay un error de sintaxis";
         }
         file.close();
         return true;

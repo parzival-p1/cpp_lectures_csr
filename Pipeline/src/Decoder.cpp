@@ -33,7 +33,6 @@ bool Decoder::isReservedWord(string sWord)
     return found;
 }
 
-
 /*
  * validar que exista el comando en el arr validCmd
  * validar que el numero de palabras del cmd sean validas
@@ -59,12 +58,11 @@ bool Decoder::validComand(string sLine, int iCount)
         // toodo lo que no esta bien!  ESTO ES UN PARSER!
 
     }
-
 }
 
 /*
 * "MOV $EDX $ADX"
-* cuenta cuántas palabras hay en sLine
+* cuenta cuï¿½ntas palabras hay en sLine
 * si hay un espacio he encontrado una palabra, y hasta llegar al final del str
 * return: numero de palabras
 */

@@ -39,7 +39,6 @@ bool Decoder::isReservedWord(string sWord)
  * return: true si las 2 validaciones anteriores son ciertas
  * return: false si las 2 previas validaciones previas
 */
-
 bool Decoder::validComand(string sLine, int iCount)
 {
     string sWord;
@@ -49,15 +48,18 @@ bool Decoder::validComand(string sLine, int iCount)
 
     if (iCount == 1 && !isReservedWord(sWord)) // valida que sea una etiqueta
         valid = true;
-    else if () { // valida que el cmd sea JMP
+    else if (iCount == 2 && iCount == 'JMP') { // valida que el cmd sea JMP
         // count == 2 palabras && es JMP todo bien
-    } else if () { // valida el resto de los cmds que existen
+        valid = true;
+    } else if (iCount == 3 && iCount != 'JMP') { // valida el resto de los cmds que existen
         // que validCmd que sean 3 && que !JMP
+        valid = true;
     }
     else { // cacha todas las excepciones, todo lo que no cae arriba
         // toodo lo que no esta bien!  ESTO ES UN PARSER!
-
+        valid = false;
     }
+    return valid;
 }
 
 /*

@@ -19,11 +19,11 @@ Decoder::~Decoder()
 
 bool Decoder::isReservedWord(string sWord)
 {
-    string validCmd [] = {"JMP", "MOV", "ADD", "SUB", "MUL", "AND", "OR", "XOR", "CMP"};
+    string validCmd [] = {"JMP", "MOV", "ADD", "SUB", "IMUL", "AND", "OR", "XOR", "CMP"};
     int i = 0;
     bool found = false;
 
-    while (i < 8 && !found)
+    while (i < 9 && !found)
     {
         if(validCmd[i] == sWord)
             found = true;
@@ -48,10 +48,10 @@ bool Decoder::validComand(string sLine, int iCount)
 
     if (iCount == 1 && !isReservedWord(sWord)) // valida que sea una etiqueta
         valid = true;
-    else if (iCount == 2 && iCount == 'JMP') { // valida que el cmd sea JMP
+    else if (iCount == 2 && sWord == "JMP") { // valida que el cmd sea JMP
         // count == 2 palabras && es JMP todo bien
         valid = true;
-    } else if (iCount == 3 && iCount != 'JMP') { // valida el resto de los cmds que existen
+    } else if (iCount == 3 && sWord != "JMP" && isReservedWord(sWord)) { // valida el resto de los cmds que existen
         // que validCmd que sean 3 && que !JMP
         valid = true;
     }
@@ -85,6 +85,7 @@ bool Decoder::start(InstructionList &List)
     ifstream file(sFileName);
     string sLine;
     int iCount;
+    bool bError = false;
 
     if (!file.is_open()) {
         cout<<"no se pudo abrir el archivo!";
@@ -92,15 +93,21 @@ bool Decoder::start(InstructionList &List)
     }
     else
     {
-        while(getline(file, sLine))
+        while(getline(file, sLine) && !bError)
         {
             iCount = wordCount(sLine);
-            if (validComand(sLine, iCount))
-                cout<<"El comando fue valido!";
-            else
-                cout<<"El comando no existe o hay un error de sintaxis";
+
+            if (validComand(sLine, iCount)) {
+                cout<<"El comando fue valido: "<<sLine<<endl;
+
+            }
+
+            else {
+                cout<<"El comando no existe o hay un error de sintaxis: "<<sLine<<endl;
+                bError = true;
+            }
         }
         file.close();
-        return true;
+        return bError;
     }
 }

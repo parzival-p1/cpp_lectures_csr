@@ -22,6 +22,8 @@ class Instruction
         void setAll(string sOpCode, string sSource, string sDestination, int iCurrentState);
         void SetNext (Instruction *val) { next = val; }
         Instruction *GetNext() { return next; }
+        string GetsTag() { return sTag; }
+        void SetsTag(string val) { sTag = val; }
 
         // FUNCTIONS
         void print();
@@ -32,6 +34,7 @@ class Instruction
         string sOpcode;
         string sSource;
         string sDestination;
+        string sTag;
         int iCurrentState;
         Instruction *next;
 };

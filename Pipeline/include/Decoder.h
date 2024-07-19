@@ -16,9 +16,10 @@ class Decoder
         ~Decoder();
 
         bool start(InstructionList &List);
-        bool validComand(string sLine, int iCount);
+        bool validComand(InstructionList &List, string sLine, int iCount);
         int wordCount(string sLine);
         bool isReservedWord(string sWord);
+
     protected:
 
     private:

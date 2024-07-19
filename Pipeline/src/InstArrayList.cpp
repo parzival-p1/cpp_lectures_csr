@@ -55,13 +55,13 @@ void InstructionList::resizeList()
     MAX = newSize;
 }
 
-void InstructionList::insertLast()
+void InstructionList::insertLast(Instruction *newNode)
 {
     // t a r e a
     if (isFull())
         resizeList();
     List[last];
-    last++; 
+    last++;
 }
 
 void InstructionList::deleteFst()

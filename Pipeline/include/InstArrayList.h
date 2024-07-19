@@ -21,7 +21,7 @@ class InstructionList
         bool isFull();
         bool isEmpty();
         void resizeList();
-        void insertLast();
+        void insertLast(Instruction *newNode);
         void deleteFst();
         void deleteAll();
         void print();

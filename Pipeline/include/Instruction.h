@@ -19,7 +19,7 @@ class Instruction
         void SetsDestination(string val) { sDestination = val; }
         int GetiCurrentState() { return iCurrentState; }
         void SetiCurrentState(int val) { iCurrentState = val; }
-        void setAll(string sOpCode, string sSource, string sDestination, int iCurrentState);
+        void setAll(string sOpCode, string sSource, string sDestination, string sTag, int iCurrentState);
         void SetNext (Instruction *val) { next = val; }
         Instruction *GetNext() { return next; }
 
@@ -27,6 +27,9 @@ class Instruction
         void SetsTag(string val) { sTag = val; }
 
         // FUNCTIONS
+        void printOperator();
+        void printJump();
+        void printTag();
         void print();
 
     protected:

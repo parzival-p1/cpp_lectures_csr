@@ -60,7 +60,7 @@ void InstructionList::insertLast(Instruction *newNode)
     // t a r e a
     if (isFull())
         resizeList();
-    List[last];
+    List[last] = *newNode; // obtenemos la instruccion sin puntero de manera directa
     last++;
 }
 

@@ -41,7 +41,7 @@ bool Decoder::isReservedWord(string sWord)
 */
 bool Decoder::validComand(InstructionList &List, string sLine, int iCount)
 {
-    Instruction node;
+    Instruction *node = new Instruction;
     string sWord;
     bool valid;
     istringstream ssConversion(sLine);
@@ -50,26 +50,25 @@ bool Decoder::validComand(InstructionList &List, string sLine, int iCount)
     if (iCount == 1 && !isReservedWord(sWord)) // valida que sea una etiqueta
     {
         valid = true;
-        node.SetsTag(sWord);
+        node->SetsTag(sWord);
     }
     else if (iCount == 2 && sWord == "JMP")
     { // valida que el cmd sea JMP
         // count == 2 palabras && es JMP todo bien
         valid = true;
-        node.SetsOpcode(sWord);
+        node->SetsOpcode(sWord);
         getline(ssConversion, sWord, ' '); // ahora lee la sig palabra que es la etiqueta
-        node.SetsTag(sWord);
-
+        node->SetsTag(sWord);
     }
     else if (iCount == 3 && sWord != "JMP" && isReservedWord(sWord))
     { // valida el resto de los cmds que existen
         // que validCmd que sean 3 && que !JMP
         valid = true;
-        node.SetsOpcode(sWord);
+        node->SetsOpcode(sWord);
         getline(ssConversion, sWord, ' ');
-        node.SetsSource(sWord);
+        node->SetsSource(sWord);
         getline(ssConversion, sWord, ' ');
-        node.SetsDestination(sWord);
+        node->SetsDestination(sWord);
     }
     else { // cacha todas las excepciones, todo lo que no cae arriba
         // toodo lo que no esta bien!  ESTO ES UN PARSER!
@@ -78,7 +77,7 @@ bool Decoder::validComand(InstructionList &List, string sLine, int iCount)
 
     if (valid)
     {
-        List.insertLast(node);
+        List.insertLast(node); // inserta el nodo en la lista
     }
     return valid;
 }

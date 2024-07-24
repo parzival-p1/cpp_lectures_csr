@@ -15,5 +15,11 @@ Simulator::~Simulator()
 
 void Simulator::run()
 {
-    decoder->start(List);
+    if (!decoder->start(List))
+    {
+        cout<<"Lectura exitosa del archivo."<<endl;
+        List.print();
+    }
+    else
+        cout<<"Ocurrio un error"<<endl;
 }

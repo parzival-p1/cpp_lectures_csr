@@ -26,6 +26,7 @@ bool InstructionList::isEmpty()
 void InstructionList::insertLast(Instruction *newNode)
 {
     Instruction *temp = head;
+    newNode->SetNext(NULL);
 
     if (isEmpty())
         head = newNode;
@@ -72,6 +73,6 @@ void InstructionList::print()
 {
     for (Instruction *aux = head; aux != NULL; aux = aux->GetNext())
     {
-        //cout<<aux->print();
+        aux->print();
     }
 }

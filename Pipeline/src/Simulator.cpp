@@ -5,6 +5,13 @@ Simulator::Simulator(string sFileName)
     //ctor
     this->sFileName = sFileName;
     decoder = new Decoder(sFileName);
+
+    int x = 5;
+    if (x == WB)
+    {
+        cout<<"Fue Write Back";
+    }
+
 }
 
 Simulator::~Simulator()

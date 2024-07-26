@@ -17,6 +17,7 @@ class Simulator
 
     private:
         string sFileName;
+        int iClockCounter;
         Decoder *decoder; // ptr no es obj
         InstructionList List;
 };

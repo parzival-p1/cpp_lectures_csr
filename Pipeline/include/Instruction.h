@@ -3,6 +3,8 @@
 
 #include <iostream>
 #include <string>
+#include "Definitions.h"
+
 using namespace std;
 
 class Instruction

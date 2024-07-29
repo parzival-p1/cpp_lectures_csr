@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Definitions.h" />
 		<Unit filename="include/Decoder.h" />
 		<Unit filename="include/InstLinkedList.h" />
 		<Unit filename="include/Instruction.h" />

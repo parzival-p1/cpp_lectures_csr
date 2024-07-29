@@ -30,15 +30,18 @@
 	<sstream>
 	"InstLinkedList.h"
 
-1719546173 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\main.cpp
+1722047516 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\main.cpp
 	<iostream>
 	"Simulator.h"
 
-1721965186 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
+1722286053 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
 	"Decoder.h"
 	<iostream>
 	<string>
+	"Definitions.h"
 
 1721777975 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
+
+1722278786 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\definitions.h
 

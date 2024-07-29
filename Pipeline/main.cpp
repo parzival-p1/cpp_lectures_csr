@@ -1,5 +1,4 @@
 #include <iostream>
-enum STATUS { INIT, IF, ID, EX, MEM, WB, CO, END };
 #include "Simulator.h"
 
 using namespace std;

@@ -11,7 +11,6 @@ Simulator::Simulator(string sFileName)
     {
         cout<<"Fue Write Back";
     }
-
 }
 
 Simulator::~Simulator()

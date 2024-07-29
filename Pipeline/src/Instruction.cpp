@@ -6,8 +6,7 @@ Instruction::Instruction()
     sSource = "";
     sDestination = "";
     sTag = "";
-    iCurrentState = 0;
-    next = NULL;
+    iCurrentState = INIT;    next = NULL;
 }
 
 Instruction::~Instruction()

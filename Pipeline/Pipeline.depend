@@ -7,9 +7,10 @@
 	<stdio.h>
 	"Instruction.h"
 
-1721358906 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\instruction.h
+1722286394 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\instruction.h
 	<iostream>
 	<string>
+	"Definitions.h"
 
 1721359131 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
 	"Instruction.h"
@@ -34,14 +35,19 @@
 	<iostream>
 	"Simulator.h"
 
-1722286053 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
+1722554885 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
 	"Decoder.h"
 	<iostream>
 	<string>
 	"Definitions.h"
+	"Alu.h"
 
-1721777975 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
+1722047518 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
 
 1722278786 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\definitions.h
+
+1722555072 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\alu.h
+	<iostream>
+	<string>
 

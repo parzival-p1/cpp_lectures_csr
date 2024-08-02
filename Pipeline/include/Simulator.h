@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include "Definitions.h"
+#include "Alu.h"
 
 using namespace std;
 

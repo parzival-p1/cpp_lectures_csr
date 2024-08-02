@@ -34,12 +34,14 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Alu.h" />
 		<Unit filename="include/Decoder.h" />
 		<Unit filename="include/Definitions.h" />
 		<Unit filename="include/InstLinkedList.h" />
 		<Unit filename="include/Instruction.h" />
 		<Unit filename="include/Simulator.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Alu.cpp" />
 		<Unit filename="src/Decoder.cpp" />
 		<Unit filename="src/InstLinkedList.cpp" />
 		<Unit filename="src/Instruction.cpp" />

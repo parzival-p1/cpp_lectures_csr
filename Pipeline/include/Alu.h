@@ -23,6 +23,7 @@ class Alu
         int cmdOr(int a, int b);
         int cmdXor(int a, int b);
         int cmdCmp(int a, int b);
+        int parseValue (string sValue);
 };
 
 #endif // ALU_H

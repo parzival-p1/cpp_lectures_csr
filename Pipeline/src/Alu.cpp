@@ -45,6 +45,22 @@ int Alu::cmdCmp(int a, int b)
         return -1;
 }
 
+int Alu::parseValue(string sValue)
+{
+    string subValue = sValue.substr(1, subValue.size() - 1);
+    int iReturnValue;
+
+    if (isdigit(subValue[0]) == 0) // validamos que no sea un digito
+    {
+        // verifico que registro es y traer el valor del registro.
+    }
+    else // validmos que SEA un digito
+    {
+        iReturnValue = stoi(subValue, nullptr, 10;
+    }
+    return iReturnValue;
+}
+
 int Alu::execute(string sOpcode, string sSource, string sDestination) // 3 paramaetros sOpcode para el cmd a recibir, sSource para el origen del cmd y destination a donde va el cmd
 {
     int isource = stoi(sSource, nullptr, 10); // convierte el str isource a entero
@@ -56,11 +72,11 @@ int Alu::execute(string sOpcode, string sSource, string sDestination) // 3 param
     {
         if (validCmd[i] == sOpcode) // la condicion indica que el comando encontrado en el array validCmd en la posicion dada i debera ser igual al parametro sOpcode
             found = true; // una vez que el comando encontrado en el array validCmd en la posicion dada i sea igual al OpCode la variable found cambiara a true
-        else // de no ser asi i debera seguir iterando hasta encontrar la condicion requerida.
+        else // de no ser asi i debera seguir iterando hasta encontrar la posicion requerida.
             i++;
     }
 
-    switch (i) { // se evaluaran distintos casos con un switch donde i itera sobre el array validCmd cuando encuentre un OpCode mandara a llamar la funcion requerida en cada caso del switch
+    switch (i) { // se evaluaran distintos casos con un switch donde i contiene la posicion de la funcion requerida en cada caso del switch
         case 0: res = cmdAdd(isource, idestination); break; // caso 0: si validCmd en la posicion i es igual a "ADD" se mandara a llamar la funcion en el caso 0
         case 1: res = cmdSub(isource, idestination); break; // caso 1: si validCmd en la posicion i es igual a "SUB" se mandara a llamar la funcion en el caso 1
         case 2: res = cmdMul(isource, idestination); break; // caso 2: si validCmd en la posicion i es igual a "IMUL" se mandara a llamar la funcion en el caso 2
@@ -69,5 +85,5 @@ int Alu::execute(string sOpcode, string sSource, string sDestination) // 3 param
         case 5: res = cmdXor(isource, idestination); break; // caso 5: si validCmd en la posicion i es igual a "XOR" se mandara a llamar la funcion en el caso 5
         case 6: res = cmdCmp(isource, idestination); break; // caso 6: si validCmd en la posicion i es igual a "CMP" se mandara a llamar la funcion en el caso 6
     }
-    return res; // return el resultado de las funciones iteradas en el switch
+    return res; // return el resultado de las funciones que se mandan llamar en el switch
 }

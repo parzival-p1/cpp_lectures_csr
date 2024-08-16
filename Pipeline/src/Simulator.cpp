@@ -18,7 +18,9 @@ void Simulator::run()
     if (!decoder->start(List))
     {
         cout<<"Lectura exitosa del archivo."<<endl;
-        List.print();
+        //List.print();
+        myAlu.execute("ADD", "$Ax", "$12", cpuReg);
+        cout<<"\nIR: "<<cpuReg.IR<<endl;
     }
     else
         cout<<"Ocurrio un error"<<endl;

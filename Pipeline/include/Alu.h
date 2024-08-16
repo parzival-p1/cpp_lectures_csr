@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Definitions.h"
 
 using namespace std;
 
@@ -10,12 +11,12 @@ class Alu
 {
     public:
         Alu();
-        int execute(string sOpcode, string sSource, string sDestination);
+        void execute(string sOpcode, string sSource, string sDestination, Registers &cpuReg);
 
     private:
-        string validCmd [] = {"ADD", "SUB", "IMUL", "AND", "OR", "XOR", "CMP"};
+        Registers cpuReg;
         int cmdCount = 7;
-
+        string validCmd [7] = {"ADD", "SUB", "IMUL", "AND", "OR", "XOR", "CMP"};
         int cmdAdd(int a, int b);
         int cmdSub(int a, int b);
         int cmdMul(int a, int b);
@@ -23,7 +24,7 @@ class Alu
         int cmdOr(int a, int b);
         int cmdXor(int a, int b);
         int cmdCmp(int a, int b);
-        int parseValue (string sValue);
+        int parseValue (string sValue, Registers &cpuReg);
 };
 
 #endif // ALU_H

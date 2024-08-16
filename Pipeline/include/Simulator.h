@@ -23,6 +23,8 @@ class Simulator
         int iClockCounter;
         Decoder *decoder; // ptr no es obj
         InstructionList List;
+        Registers cpuReg;
+        Alu myAlu;
 };
 
 #endif // SIMULATOR_H

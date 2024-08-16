@@ -12,7 +12,7 @@
 	<string>
 	"Definitions.h"
 
-1721359131 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
+1722287560 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
 	"Instruction.h"
 
 1721778175 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\instlinkedlist.cpp
@@ -35,19 +35,23 @@
 	<iostream>
 	"Simulator.h"
 
-1722554885 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
+1723848829 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\simulator.h
 	"Decoder.h"
 	<iostream>
 	<string>
 	"Definitions.h"
 	"Alu.h"
 
-1722047518 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
+1723851717 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
 
-1722278786 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\definitions.h
+1723848311 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\definitions.h
 
-1722555072 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\alu.h
+1723852147 c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\include\alu.h
 	<iostream>
 	<string>
+	"Definitions.h"
+
+1723852316 source:c:\users\pacool\documents\programming\cpp_lectures_csr\pipeline\src\alu.cpp
+	"Alu.h"
 

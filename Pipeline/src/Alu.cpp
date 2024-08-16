@@ -45,26 +45,36 @@ int Alu::cmdCmp(int a, int b)
         return -1;
 }
 
-int Alu::parseValue(string sValue)
+int Alu::parseValue(string sValue, Registers &cpuReg)
 {
-    string subValue = sValue.substr(1, subValue.size() - 1);
+    string subValue = sValue.substr(1, sValue.size() - 1); // quita el signo $
     int iReturnValue;
 
     if (isdigit(subValue[0]) == 0) // validamos que no sea un digito
     {
         // verifico que registro es y traer el valor del registro.
+        if(subValue == "Ax")
+            iReturnValue = cpuReg.Ax;
+        else if (subValue == "Bx")
+            iReturnValue = cpuReg.Bx;
+        else if (subValue == "Cx")
+            iReturnValue = cpuReg.Cx;
+        else if (subValue == "Dx")
+            iReturnValue = cpuReg.Dx;
+        else
+            iReturnValue = cpuReg.IR;
     }
     else // validmos que SEA un digito
     {
-        iReturnValue = stoi(subValue, nullptr, 10;
+        iReturnValue = stoi(subValue, nullptr, 10);
     }
     return iReturnValue;
 }
 
-int Alu::execute(string sOpcode, string sSource, string sDestination) // 3 paramaetros sOpcode para el cmd a recibir, sSource para el origen del cmd y destination a donde va el cmd
+void Alu::execute(string sOpcode, string sSource, string sDestination, Registers &cpuReg) // 3 paramaetros sOpcode para el cmd a recibir, sSource para el origen del cmd y destination a donde va el cmd
 {
-    int isource = stoi(sSource, nullptr, 10); // convierte el str isource a entero
-    int idestination = stoi(sDestination, nullptr, 10); // convierte el str destination a enterio
+    int isource = parseValue(sSource, cpuReg); // convierte el str isource a entero
+    int idestination = parseValue(sDestination, cpuReg); // convierte el str destination a enterio
     int i = 0, res; // contador i para que recorra el array validCmd y encuentre el OpCode, usaremos la var entera res para guardar el resultado
     bool found = false; // la variable found se utilizara para detener el while una vez se haya encontrado el Opcode dentro del array validCmd
 
@@ -76,7 +86,8 @@ int Alu::execute(string sOpcode, string sSource, string sDestination) // 3 param
             i++;
     }
 
-    switch (i) { // se evaluaran distintos casos con un switch donde i contiene la posicion de la funcion requerida en cada caso del switch
+    switch (i)
+    { // se evaluaran distintos casos con un switch donde i contiene la posicion de la funcion requerida en cada caso del switch
         case 0: res = cmdAdd(isource, idestination); break; // caso 0: si validCmd en la posicion i es igual a "ADD" se mandara a llamar la funcion en el caso 0
         case 1: res = cmdSub(isource, idestination); break; // caso 1: si validCmd en la posicion i es igual a "SUB" se mandara a llamar la funcion en el caso 1
         case 2: res = cmdMul(isource, idestination); break; // caso 2: si validCmd en la posicion i es igual a "IMUL" se mandara a llamar la funcion en el caso 2
@@ -85,5 +96,5 @@ int Alu::execute(string sOpcode, string sSource, string sDestination) // 3 param
         case 5: res = cmdXor(isource, idestination); break; // caso 5: si validCmd en la posicion i es igual a "XOR" se mandara a llamar la funcion en el caso 5
         case 6: res = cmdCmp(isource, idestination); break; // caso 6: si validCmd en la posicion i es igual a "CMP" se mandara a llamar la funcion en el caso 6
     }
-    return res; // return el resultado de las funciones que se mandan llamar en el switch
+    cpuReg.IR = res;
 }

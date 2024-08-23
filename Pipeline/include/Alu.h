@@ -25,6 +25,7 @@ class Alu
         int cmdXor(int a, int b);
         int cmdCmp(int a, int b);
         int parseValue (string sValue, Registers &cpuReg);
+        void assignValue(string sSource, int iDestination, Registers &cpuReg);
 };
 
 #endif // ALU_H

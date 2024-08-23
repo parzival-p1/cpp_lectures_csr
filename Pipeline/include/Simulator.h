@@ -21,10 +21,10 @@ class Simulator
     private:
         string sFileName;
         int iClockCounter;
-        Decoder *decoder; // ptr no es obj
-        InstructionList List;
-        Registers cpuReg;
-        Alu myAlu;
+        Decoder *decoder; // ptr no es obj (no es una instancia) no se manda llamar el CTOR
+        InstructionList List; // esto es una instancia
+        Registers cpuReg; // aqui se esta creando el objeto
+        Alu myAlu; // aqui se crea el obj
 };
 
 #endif // SIMULATOR_H

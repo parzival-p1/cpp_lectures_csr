@@ -1,6 +1,8 @@
 #ifndef INSTRUCTIONLIST_H
 #define INSTRUCTIONLIST_H
 #include "Instruction.h"
+#include "Alu.h"
+#include "Definitions.h"
 
 using namespace std;
 
@@ -9,7 +11,6 @@ class InstructionList
     public:
         InstructionList();
         ~InstructionList();
-        InstructionList(const InstructionList& other);
 
         Instruction *Gethead() { return head; }
         void Sethead(Instruction *val) { head = val; }
@@ -18,7 +19,10 @@ class InstructionList
         void insertLast(Instruction *newNode);
         void deleteBegin();
         void deleteAll();
-        void print();
+        void print(Alu &alu, Registers &registers);
+        Instruction *getNextNode(Instruction *currentNode);
+        bool instEndState ();
+        void changeInstructionState();
 
     protected:
 

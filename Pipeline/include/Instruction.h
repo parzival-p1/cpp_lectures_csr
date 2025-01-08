@@ -20,10 +20,12 @@ class Instruction
         string GetsDestination() { return sDestination; }
         void SetsDestination(string val) { sDestination = val; }
         int GetiCurrentState() { return iCurrentState; }
-        void SetiCurrentState(int val) { iCurrentState = val; }
+        void changeState() { if (iCurrentState != END) iCurrentState++; }
         void setAll(string sOpCode, string sSource, string sDestination, string sTag, int iCurrentState);
         void SetNext (Instruction *val) { next = val; }
         Instruction *GetNext() { return next; }
+        void SetPrev (Instruction *val) { prev = val; }
+        Instruction *GetPrev() { return prev; }
 
         string GetsTag() { return sTag; }
         void SetsTag(string val) { sTag = val; }
@@ -32,7 +34,8 @@ class Instruction
         void printOperator();
         void printJump();
         void printTag();
-        void print();
+        bool print();
+        string printState();
 
     protected:
 
@@ -41,8 +44,10 @@ class Instruction
         string sSource;
         string sDestination;
         string sTag;
+        bool bExecute;
         int iCurrentState;
         Instruction *next;
+        Instruction *prev;
 };
 
 #endif // INSTRUCTION_H

@@ -1,6 +1,9 @@
 #ifndef DEFINITIONS_H_INCLUDED
 #define DEFINITIONS_H_INCLUDED
 
+using namespace std;
+
+// Init = Inicio, IF = Instruction Fetch, ID = Instruction Decode, EX = Execute, MEM = Memory, WB = Write back, CO = Commit, END = Final
 enum STATUS { INIT, IF, ID, EX, MEM, WB, CO, END };
 
 struct Registers {

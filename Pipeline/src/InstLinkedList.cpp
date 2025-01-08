@@ -10,11 +10,6 @@ InstructionList::~InstructionList()
     deleteAll();
 }
 
-InstructionList::InstructionList(const InstructionList& other)
-{
-    //copy ctor
-}
-
 bool InstructionList::isEmpty()
 {
     if(head == NULL)
@@ -26,15 +21,15 @@ bool InstructionList::isEmpty()
 void InstructionList::insertLast(Instruction *newNode)
 {
     Instruction *temp = head;
-    newNode->SetNext(NULL);
 
     if (isEmpty())
         head = newNode;
     else
     {
-        while (temp->GetNext() != NULL)
+        while (temp->GetNext() != NULL) // busca el ultimo nodo
             temp = temp->GetNext();
         temp->SetNext(newNode);
+        newNode->SetPrev(temp);
     }
 }
 
@@ -45,6 +40,7 @@ void InstructionList::deleteBegin()
     if (!isEmpty())
     {
         head = head->GetNext();
+        head->SetPrev(NULL);
         delete temp;
     }
 }
@@ -69,10 +65,64 @@ void InstructionList::deleteAll()
     }
 }
 
-void InstructionList::print()
+void InstructionList::print(Alu &alu, Registers &registers)
 {
+    bool bExecute;
+
     for (Instruction *aux = head; aux != NULL; aux = aux->GetNext())
     {
-        aux->print();
+       bExecute = aux->print();
+       if (bExecute)
+       {
+           alu.execute(aux->GetsOpcode(), aux->GetsSource(), aux->GetsDestination(), registers);
+       }
+    }
+
+
+}
+
+Instruction *InstructionList::getNextNode(Instruction *currentNode)
+{
+    if (currentNode == NULL)
+        return head;
+    else
+        return currentNode->GetNext();
+}
+
+bool InstructionList::instEndState ()
+{
+    Instruction *aux = head;
+    bool bContinue = true;
+
+    if (isEmpty())
+        return true;
+    else
+    {
+        while (aux != NULL && bContinue)
+        {
+            if (aux->GetiCurrentState() != END)
+                bContinue = false;
+            else
+                aux = aux->GetNext();
+        }
+        return bContinue;
     }
 }
+
+void InstructionList::changeInstructionState()
+{
+    Instruction *temp = head;
+
+    if (!isEmpty())
+    {
+        temp->changeState();
+        temp = temp->GetNext();
+
+        while (temp != NULL && temp->GetPrev()->GetiCurrentState() != IF)
+        {
+            temp->changeState();
+            temp = temp->GetNext();
+        }
+    }
+}
+

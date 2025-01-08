@@ -6,7 +6,10 @@ Instruction::Instruction()
     sSource = "";
     sDestination = "";
     sTag = "";
-    iCurrentState = INIT;    next = NULL;
+    iCurrentState = INIT;
+    next = NULL;
+    prev = NULL;
+    bExecute = false;
 }
 
 Instruction::~Instruction()
@@ -26,22 +29,22 @@ void Instruction::setAll(string sOpCode, string sSource, string sDestination, st
 void Instruction::printOperator()
 {
     // imprimir de manera directa.
-    cout<<sOpcode<<" "<<sSource<<" "<<sDestination<<" "<<iCurrentState<<" "<<endl;
+    cout<<sOpcode<<" "<<sSource<<" "<<sDestination<<" - State: "<<printState()<<endl;
 }
 
 void Instruction::printJump()
 {
     // imprimir de manera directa.
-    cout<<sOpcode<<" "<<sTag<<" "<<iCurrentState<<" "<<endl;
+    cout<<sOpcode<<" "<<sTag<<" - State: "<<printState()<<endl;
 }
 
 void Instruction::printTag()
 {
     // imprimir de manera directa.
-    cout<<sTag<<" "<<iCurrentState<<" "<<endl;
+    cout<<sTag<<" - State: "<<printState()<<endl;
 }
 
-void Instruction::print()
+bool Instruction::print()
 {
     if (sOpcode == "")
         printTag();
@@ -49,4 +52,28 @@ void Instruction::print()
         printJump();
     else
         printOperator();
+
+    return bExecute;
 }
+
+string Instruction::printState()
+{
+    string strCurrentState;
+    bExecute = false;
+
+    switch (iCurrentState)
+    {
+        case INIT: strCurrentState = "INIT State"; break;
+        case IF: strCurrentState = "IF Instruction Fetch"; break;
+        case ID: strCurrentState = "ID Instruction Decode"; break;
+        case EX: strCurrentState = "EX Execute"; bExecute = true; break;
+        case MEM: strCurrentState = "MEM Memory"; break;
+        case WB: strCurrentState = "WB Write Back"; break;
+        case CO: strCurrentState = "CO Commit"; break;
+        case END: strCurrentState = "END State"; break;
+        default: strCurrentState = "Error State"; break;
+    }
+    return strCurrentState;
+}
+
+

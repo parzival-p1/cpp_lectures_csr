@@ -44,8 +44,8 @@ bool Decoder::validComand(InstructionList &List, string sLine, int iCount)
     Instruction *node = new Instruction;
     string sWord;
     bool valid;
-    istringstream ssConversion(sLine);
-    getline(ssConversion, sWord, ' ');
+    istringstream ssConversion(sLine); // istringstream es un tipo de dato para que el str se comporte como un flujo (consola, arch, etc).
+    getline(ssConversion, sWord, ' '); // necesita recibir un flujo en su 1er param.
 
     if (iCount == 1 && !isReservedWord(sWord)) // valida que sea una etiqueta
     {
@@ -105,7 +105,7 @@ bool Decoder::start(InstructionList &List)
     ifstream file(sFileName);
     string sLine;
     int iCount;
-    bool bError = false;
+    bool bError = true;
 
     if (!file.is_open()) {
         cout<<"no se pudo abrir el archivo!";
@@ -113,7 +113,7 @@ bool Decoder::start(InstructionList &List)
     }
     else
     {
-        while(getline(file, sLine) && !bError)
+        while(getline(file, sLine) && bError)
         {
             iCount = wordCount(sLine);
 
@@ -123,7 +123,7 @@ bool Decoder::start(InstructionList &List)
 
             else {
                 cout<<"El comando no existe o hay un error de sintaxis: "<<sLine<<endl;
-                bError = true;
+                bError = false;
             }
         }
         file.close();

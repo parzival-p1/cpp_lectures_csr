@@ -74,8 +74,7 @@ int Alu::parseValue(string sValue, Registers &cpuReg)
 void Alu::execute(string sOpcode, string sSource, string sDestination, Registers &cpuReg) // 3 paramaetros sOpcode para el cmd a recibir, sSource para el origen del cmd y destination a donde va el cmd
 {
     int idestination = parseValue(sDestination, cpuReg); // convierte el str destination a enterio
-    if (sOpcode == "MOV")
-    {
+    if (sOpcode == "MOV") {
         assignValue(sSource, idestination, cpuReg);
     }
     else

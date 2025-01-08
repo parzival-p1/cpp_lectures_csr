@@ -14,7 +14,6 @@ class Alu
         void execute(string sOpcode, string sSource, string sDestination, Registers &cpuReg);
 
     private:
-        Registers cpuReg;
         int cmdCount = 7;
         string validCmd [7] = {"ADD", "SUB", "IMUL", "AND", "OR", "XOR", "CMP"};
         int cmdAdd(int a, int b);

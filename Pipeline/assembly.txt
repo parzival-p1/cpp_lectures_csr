@@ -1,10 +1,10 @@
-MOV $0 %ecx
-CMP $1 %edx
+MOV $Cx %4
+CMP $1 $Dx
 ADD $1 $0
-MOV %edx %eax
+MOV $Dx $Ax
 AND $1 $4
 JMP .ONE
-MOV %edx %eax
+MOV %Dx %Ax
 ADD $2 $0
 SUB $6 $1
 IMUL $3 $3

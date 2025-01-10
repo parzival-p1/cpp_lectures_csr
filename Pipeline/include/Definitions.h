@@ -17,6 +17,15 @@ struct Registers {
     {
         Ax = Bx = Cx = Dx = IR = 0;
     }
+
+    void print()
+    {
+        cout<<"Ax: "<<Ax<<endl;
+        cout<<"Bx: "<<Bx<<endl;
+        cout<<"Cx: "<<Cx<<endl;
+        cout<<"Dx: "<<Dx<<endl;
+        cout<<"IR: "<<IR<<endl;
+    }
 };
 
 #endif // DEFINITIONS_H_INCLUDED

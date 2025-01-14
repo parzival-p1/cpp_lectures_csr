@@ -12,19 +12,9 @@
 			<Cursor1 position="356" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Alu.cpp" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+	<File name="include\Alu.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1413" topLine="45" />
-		</Cursor>
-	</File>
-	<File name="include\Definitions.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="630" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\InstLinkedList.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1533" topLine="94" />
+			<Cursor1 position="288" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="include\Simulator.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
@@ -32,14 +22,9 @@
 			<Cursor1 position="229" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\InstLinkedList.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Definitions.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="571" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Alu.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="288" topLine="0" />
+			<Cursor1 position="630" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
@@ -52,14 +37,29 @@
 			<Cursor1 position="951" topLine="3" />
 		</Cursor>
 	</File>
+	<File name="src\Decoder.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2871" topLine="95" />
+		</Cursor>
+	</File>
 	<File name="src\Instruction.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="914" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Decoder.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+	<File name="src\InstLinkedList.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2871" topLine="95" />
+			<Cursor1 position="1533" topLine="94" />
+		</Cursor>
+	</File>
+	<File name="src\Alu.cpp" open="1" top="1" tabpos="9" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="12" />
+		</Cursor>
+	</File>
+	<File name="include\InstLinkedList.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="571" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

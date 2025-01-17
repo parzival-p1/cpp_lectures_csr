@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1737084377 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\leetcode\longestprefix\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

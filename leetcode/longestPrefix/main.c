@@ -2,27 +2,52 @@
 #include <stdlib.h>
 #include <string.h>
 
-
 char* longestCommonPrefix(char** strs, int strsSize) {
 
     char *prefix = (char *)malloc(sizeof(char) * 200);
-    sprintf(prefix, "hola");
 
-    for (int i = 0; i < strsSize; i++)
+    if (strsSize == 1)
+        strcpy(prefix, strs[0]);
+    else
     {
-        for (int j = 0; j < strlen(strs[i]); j++)
+         int i = 1, j = 0;
+        char c = strs[0][j];
+        int exit = 0;
+
+        while (i < strsSize && !exit)
         {
-            printf("strs[%i][%i] = %c", i, j, strs[i][j]);
+            if (c != strs[i][j])
+                exit = 1;
+            else if (i == strsSize - 1)
+            {
+                prefix[j] = c;
+                i = 1;
+                j++;
+                c = strs[0][j];
+            }
+            else
+                i++;
         }
+        prefix[j] = '\0';
     }
     return prefix;
 }
 
 int main()
 {
-    char **words = {"flower","flow","flight"};
-    char *prefix = longestCommonPrefix(words, 3);
-    printf("El prefijo es: %s ", prefix);
+    int wordSize = 3;
+    char **words = (char **)malloc(wordSize * sizeof(char *));
+    words[0] = (char *)malloc(strlen("") + 1);
+    words[1] = (char *)malloc(strlen("") + 1);
+    words[2] = (char *)malloc(strlen("") + 1);
+
+    strcpy(words[0], "");
+    strcpy(words[1], "");
+    strcpy(words[2], "");
+
+    char *prefix = longestCommonPrefix(words, wordSize);
+    printf("El prefijo es: %s\n", prefix);
+    free(words);
     free(prefix);
     return 0;
 }

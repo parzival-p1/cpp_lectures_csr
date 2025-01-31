@@ -9,7 +9,7 @@ bool isPalindrome(char* s)
     int i = 0, j = 0;
     int len = strlen(s);
     bool stop = false;
-    char string [len];
+    char string [len + 1];
 
     while(i < len && !stop)
     {
@@ -18,7 +18,7 @@ bool isPalindrome(char* s)
             string[j] = tolower(s[i]);
             j++;
         }
-        else if (isalpha(s[i]) != 0)
+        else if (isalnum(s[i]) != 0)
         {
             string[j] = s[i];
             j++;
@@ -27,11 +27,27 @@ bool isPalindrome(char* s)
     }
     string[j] = '\0';
     printf("%s\n", string);
+
+    i = 0;
+    j = strlen(string) - 1;
+
+    bool exit = false;
+
+    while (i < j && !exit)
+    {
+        if (string[i] != string[j])
+            exit = true;
+        else {
+            i++;
+            j--;
+        }
+    }
+    return !exit;
 }
 
 int main()
 {
-    if (isPalindrome("A man, a plan, a canal: Panama"))
+    if (isPalindrome("a"))
         printf("Si es palindromo");
     else
         printf("No es palindromo");

@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1737688602 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\leetcode\valid_palindrome\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<string.h>
+	<ctype.h>
+

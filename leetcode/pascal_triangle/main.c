@@ -19,32 +19,72 @@ int** generate(int numRows, int* returnSize, int** returnColumnSizes) {
         *returnColumnSizes = (int*)malloc(sizeof(int) * numRows); // se crea el array de columSizes con lo que traiga numRows
         pascal = (int**)malloc(sizeof(int*) * numRows); // aqui se crea la matriz
 
+        int row = 1, col, count;
 
-        if (numRows > 1)
+        while(row <= numRows)
         {
-            int row = 1, col, count;
-
-            while(row <= numRows)
+            pascal[row - 1] = (int*)malloc(sizeof(int) * row); // se crean las columnas de la fila o el array que va en la fila
+            pascal[row - 1][0] = 1; // pon un 1 en la 1er pos
+            if (row > 1)
             {
-                pascal[row - 1] = (int*)malloc(sizeof(int) * row); // se crean las columnas de la fila o el array que va en la fila
-                pascal[row - 1][0] = 1; // pon un 1 en la 1er pos
-                if (row > 1)
-                {
-                    count = 0;
-                    col = 1;
-                    while (col < row - 1) {
-                        pascal[row - 1][col] = pascal[row - 2][count] + pascal[row - 2][count + 1];
-                        col++;
-                        count++;
-                    }
-                    pascal[row - 1][col] = 1; // pon un 1 la ultima pos
+                count = 0;
+                col = 1;
+                while (col < row - 1) {
+                    pascal[row - 1][col] = pascal[row - 2][count] + pascal[row - 2][count + 1];
+                    col++;
+                    count++;
                 }
-                *returnColumnSizes[row - 1] = row;
-                row++;
+                pascal[row - 1][col] = 1; // pon un 1 la ultima pos
             }
+            (*returnColumnSizes)[row - 1] = row;
+            row++;
         }
     }
     return pascal;
+}
+
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* getRow(int rowIndex, int* returnSize)
+{
+    int **pascal = NULL;
+
+    if (rowIndex > 0)
+    {
+        // Mem para almacenar las filas
+        pascal = (int**)malloc(sizeof(int*) * rowIndex); // aqui se crea la matriz
+
+        int row = 1, col, count;
+
+        while(row <= rowIndex)
+        {
+            pascal[row - 1] = (int*)malloc(sizeof(int) * row); // se crean las columnas de la fila o el array que va en la fila
+            pascal[row - 1][0] = 1; // pon un 1 en la 1er pos
+            if (row > 1)
+            {
+                count = 0;
+                col = 1;
+                while (col < row - 1) {
+                    pascal[row - 1][col] = pascal[row - 2][count] + pascal[row - 2][count + 1];
+                    col++;
+                    count++;
+                }
+                pascal[row - 1][col] = 1; // pon un 1 la ultima pos
+            }
+            *returnSize = row;
+            row++;
+        }
+    }
+    return pascal[rowIndex];
+}
+
+void printRow(int* result,int rowReturnSize)
+{
+    for (int i = 0; i < rowReturnSize; i++)
+        printf("%i ", result[i]);
+    printf("\n");
+
 }
 
 void print(int** result, int size, int* returnSizes)
@@ -59,12 +99,16 @@ void print(int** result, int size, int* returnSizes)
 
 int main()
 {
-    int numRows = 6;
+    int numRows = 10;
+    // El triangulo de Pascal completo
     int returnSize;
     int* returnColumnSizes;
     int** result = generate(numRows, &returnSize, &returnColumnSizes);
 
     print(result, returnSize, returnColumnSizes);
+    // La ultima fila del triangulo de pascal
+    int* rowResult = getRow(numRows, &returnSize);
+    printRow(rowResult, returnSize);
     free(result);
     free(returnColumnSizes);
     return 0;

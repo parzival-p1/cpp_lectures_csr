@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1738637983 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\leetcode\pascal_triangle\main.c
+1738895565 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\leetcode\pascal_triangle\main.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 

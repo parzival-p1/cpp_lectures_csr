@@ -1,5 +1,6 @@
 # depslib dependency file v1.0
-1739232665 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\leetcode\168_excel_shet_column_title\main.c
+1739502761 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\leetcode\168_excel_shet_column_title\main.c
 	<stdio.h>
 	<stdlib.h>
+	<math.h>
 

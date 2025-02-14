@@ -4,15 +4,24 @@
 
 char* convertToTitle(int columnNumber)
 {
-    int numChars = (int)ceil(log(columnNumber) / log(26));
+    int numChars = (int)floor(log(columnNumber) / log(26)) + 1;
     char* column = (char*)malloc(sizeof(char) * numChars + 1);
+    int chunk = columnNumber;
+    // Como tratar todas las letras como si fueran la ultima, que todas apliquen lo mismo
+    // que le tiene que pasar a chunk? para que la pos donde estoy se comporte como el ultimo char, si lo dividio o mod de 26 que da??
 
-    // TAREA
-    // COMO CALCULAR LAS LETRAS?
-    // EJ. COL 23 QUE LETRA REGRESA? SI 26 = Z, 23 = W
-    // USAR % 26 ascii tiene relacion? puedes calcularlo?
-    // ideas
+    // MUEVE CHUNK
+    // columnNumber = 678; res = "AAB"
+    // cuanto debe vale chunk para sacar la 1a A ?
+    // cuanto debe valer chunk para sacar 2a A ?
+    // cuanto debeb valer chunk para sacar la B?
+    for (int i = 0; i < numChars; i++)
+    {
+        column[i] = 64 + chunk % 26;
+    }
 
+    column[numChars] = '\0';
+    return column;
 }
 
 /*
@@ -37,14 +46,8 @@ func convertToTitle(columnNumber):
 int main()
 {
     char* result;
-    int column = 5;
-    //result = convertToTitle(column);
-    float x = log(23) / log(26);
-    int y = ceil(x);
-    printf("%i\n", (int)ceil(x));
-    printf("%i\n", (int)ceil(log(500) / log(26)));
-    printf("%i\n", (int)ceil(log(1500) / log(26)));
-    printf("%i\n", (int)ceil(log(345838) / log(26)));
+    int column = 1;
+    printf("%i\n", (26 -  1) % 26);
 
     result = convertToTitle(column);
     printf("\n%s\n", result);

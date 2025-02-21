@@ -6,15 +6,17 @@
 #include <string>
 #include "Definitions.h"
 #include "Alu.h"
+#include "process.h"
 
 using namespace std;
 
 class Simulator
 {
     public:
-        Simulator(string sFileName);
+        Simulator();
         ~Simulator();
         void run();
+        void runTest();
 
     protected:
 

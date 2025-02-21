@@ -1,0 +1,60 @@
+MOV $7 %ecx
+CMP $10 %edx
+ADD $4 $6
+MOV %edx %eax
+AND $4 $6
+JMP .ONE
+MOV %edx %eax
+ADD $2 $2
+SUB $6 $9
+IMUL $7 $7
+XOR $6 $1
+AND $5 $8
+OR $10 $3
+.ONE
+ADD $7 $5
+MOV $7 %ecx
+CMP $10 %edx
+ADD $4 $6
+MOV %edx %eax
+AND $4 $6
+JMP .ONE
+MOV %edx %eax
+ADD $2 $2
+SUB $6 $9
+IMUL $7 $7
+XOR $6 $1
+AND $5 $8
+OR $10 $3
+.ONE
+ADD $7 $5
+MOV $7 %ecx
+CMP $10 %edx
+ADD $4 $6
+MOV %edx %eax
+AND $4 $6
+JMP .ONE
+MOV %edx %eax
+ADD $2 $2
+SUB $6 $9
+IMUL $7 $7
+XOR $6 $1
+AND $5 $8
+OR $10 $3
+.ONE
+ADD $7 $5
+MOV $7 %ecx
+CMP $10 %edx
+ADD $4 $6
+MOV %edx %eax
+AND $4 $6
+JMP .ONE
+MOV %edx %eax
+ADD $2 $2
+SUB $6 $9
+IMUL $7 $7
+XOR $6 $1
+AND $5 $8
+OR $10 $3
+.ONE
+ADD $7 $5

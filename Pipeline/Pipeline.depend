@@ -105,16 +105,17 @@
 1736221570 source:c:\users\acer\documents\fco_hdzt\cpp_lectures_csr-main\pipeline\src\simulator.cpp
 	"Simulator.h"
 
-1724377360 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\main.cpp
+1740107105 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\main.cpp
 	<iostream>
 	"Simulator.h"
 
-1736216972 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\simulator.h
+1740107048 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\simulator.h
 	"Decoder.h"
 	<iostream>
 	<string>
 	"Definitions.h"
 	"Alu.h"
+	"process.h"
 
 1724377360 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\decoder.h
 	<iostream>
@@ -140,7 +141,7 @@
 	<string>
 	"Definitions.h"
 
-1736477814 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\alu.cpp
+1740103909 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\alu.cpp
 	"Alu.h"
 
 1735871661 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\decoder.cpp
@@ -152,6 +153,16 @@
 1736220364 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
 	"Instruction.h"
 
-1736221570 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
+1740107710 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
+
+1740107771 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+
+1740106838 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\process.cpp
+	"Process.h"
 

@@ -78,10 +78,11 @@ void Alu::execute(string sOpcode, string sSource, string sDestination, Registers
 {
     int idestination = parseValue(sDestination, cpuReg); // convierte el str destination a enterio
 
-    if (sOpcode == "MOV") {
+    if (sOpcode == "MOV")
+    {
         assignValue(sSource, idestination, cpuReg);
         cout<<"MOV command detected from "<<sSource<<" to "<<sDestination<<endl;
-        cpuReg.print();
+        //cpuReg.print();
     }
     else
     {
@@ -114,7 +115,7 @@ void Alu::execute(string sOpcode, string sSource, string sDestination, Registers
         }
         cpuReg.IR = res;
         cout<<sOpcode<<" command detected"<<endl;
-        cpuReg.print();
+        //cpuReg.print();
     }
 }
 

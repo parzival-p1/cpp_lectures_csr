@@ -1,0 +1,21 @@
+MOV $6 %ecx
+CMP $7 %edx
+ADD $10 $8
+MOV %edx %eax
+ADD $1 $0
+JMP .ONE
+ADD $10 $8
+MOV %edx %eax
+ADD $1 $0
+ADD $10 $8
+MOV %edx %eax
+ADD $1 $0
+MOV $6 %ecx
+CMP $7 %edx
+MOV $6 %ecx
+CMP $7 %edx
+MOV $6 %ecx
+CMP $7 %edx
+JMP .ONE
+JMP .ONE
+JMP .ONE

@@ -1,0 +1,5 @@
+MOV $4 %ecx
+CMP $2 %edx
+ADD $10 $10
+MOV %edx %eax
+AND $10 $9

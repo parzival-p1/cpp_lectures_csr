@@ -1,18 +1,26 @@
 #include "Simulator.h"
 
-Simulator::Simulator(string sFileName)
+Simulator::Simulator()
 {
     //ctor
-    this->sFileName = sFileName;
     cpuReg.cleanRegisters();
-    decoder = new Decoder(sFileName);
     iClockCounter = 0; // cuenta los ciclos de reloj, por cada ciclo de reloj = ciclo de while
+    decoder = NULL;
 }
 
 Simulator::~Simulator()
 {
     // dtor
-    delete decoder;
+    if (decoder)
+        delete decoder;
+}
+
+void Simulator::runTest()
+{
+    for (int i = 0; i < 10; i++)
+    {
+        Process p;
+    }
 }
 
 void Simulator::run()

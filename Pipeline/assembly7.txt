@@ -1,0 +1,113 @@
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax
+.ONE
+ADD $5 $6
+SUB $8 $4
+IMUL $1 $4
+XOR $6 $3
+MOV %edx %eax

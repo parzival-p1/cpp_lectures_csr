@@ -40,6 +40,7 @@
 		<Unit filename="include/InstLinkedList.h" />
 		<Unit filename="include/Instruction.h" />
 		<Unit filename="include/Process.h" />
+		<Unit filename="include/ProcessList.h" />
 		<Unit filename="include/Simulator.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Alu.cpp" />
@@ -47,6 +48,7 @@
 		<Unit filename="src/InstLinkedList.cpp" />
 		<Unit filename="src/Instruction.cpp" />
 		<Unit filename="src/Process.cpp" />
+		<Unit filename="src/ProcessList.cpp" />
 		<Unit filename="src/Simulator.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

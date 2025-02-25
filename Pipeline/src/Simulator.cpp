@@ -17,6 +17,8 @@ Simulator::~Simulator()
 
 void Simulator::runTest()
 {
+    srand(time(NULL));
+
     for (int i = 0; i < 10; i++)
     {
         Process p;

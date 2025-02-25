@@ -9,3 +9,4 @@ int main()
     simulator.runTest(); // 2. manda llamar run
     return 0;
 }
+

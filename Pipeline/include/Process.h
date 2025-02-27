@@ -18,6 +18,7 @@ class Process
         bool Getactive() { return active; }
         void Setactive(bool val) { active = val; }
         // T A R E A hacer la funcion que imprima los daatos del proceso: pid, activo, instrucciones
+        void printProcess();
 
     protected:
 
@@ -29,6 +30,7 @@ class Process
         double f(double x);
         double random_uniform();
         double monte_carlo_sample();
+
 };
 
 #endif // PROCESS_H

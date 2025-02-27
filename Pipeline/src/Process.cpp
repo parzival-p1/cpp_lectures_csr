@@ -38,4 +38,11 @@ double Process::monte_carlo_sample() {
     return x;
 }
 
-
+/* imprima los daatos del proceso: pid, activo, instrucciones */
+void Process::printProcess()
+{
+    Process p;
+    cout<<"PID: "<<p.Getpid()<<endl;
+    cout<<"Active: "<<p.Getactive()<<endl;
+    cout<<"Instruction: "<<p.GetinstructionCount()<<endl;
+}

@@ -153,16 +153,26 @@
 1736220364 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
 	"Instruction.h"
 
-1740107710 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
+1740621605 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
 
-1740449208 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
+1740621698 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
 	<iostream>
 	<string>
 	<cstdlib>
 	<ctime>
 	<windows.h>
 
-1740107926 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\process.cpp
+1740621551 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\process.cpp
 	"Process.h"
+
+1740614850 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\processlist.cpp
+	"ProcessList.h"
+
+1740614222 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\processlist.h
+	<iostream>
+	"Process.h"
+	<string>
+	<cstdlib>
+	<windows.h>
 

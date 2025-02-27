@@ -1,6 +1,12 @@
 #ifndef PROCESSLIST_H
 #define PROCESSLIST_H
+#include <iostream>
 #include "Process.h"
+#include <string>
+#include <cstdlib>
+#include <windows.h>
+
+using namespace std;
 
 struct Node
 {
@@ -16,7 +22,7 @@ class ProcessList
         bool isEmpty();
         Node *pop();
         void push(Node *newNode);
-        void print();
+        void printProcessList(Node *head);
 
     private:
         Node *head;

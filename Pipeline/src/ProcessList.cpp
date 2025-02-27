@@ -62,7 +62,13 @@ void ProcessList::push(Node *newNode)
     }
 }
 
-void ProcessList::print()
+void ProcessList::printProcessList(Node *head)
 {
+    Node *temp = head;
 
+    while (temp != NULL)
+    {
+        cout<<temp->next<<endl;
+        temp = temp->next;
+    }
 }

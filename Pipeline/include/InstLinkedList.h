@@ -23,11 +23,13 @@ class InstructionList
         Instruction *getNextNode(Instruction *currentNode);
         bool instEndState ();
         void changeInstructionState();
+        int GetInstructionCount(){ return instructionCount; }
 
     protected:
 
     private:
         Instruction *head;
+        int instructionCount;
 };
 
 #endif // INSTRUCTIONLIST_H

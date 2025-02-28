@@ -22,6 +22,7 @@ ProcessList::~ProcessList()
         delete temp;
         head = tail = NULL;
     }
+    cout<<"Nodos destruidos"<<endl;
 }
 
 bool ProcessList::isEmpty()
@@ -38,8 +39,12 @@ Node *ProcessList::pop()
 
     if (!isEmpty())
     {
-        head = temp->next;
-        tail->next = head;
+        if (head == tail)
+            head = tail = NULL;
+        else {
+            head = temp->next;
+            tail->next = head;
+        }
         return temp;
     }
     else
@@ -62,13 +67,14 @@ void ProcessList::push(Node *newNode)
     }
 }
 
-void ProcessList::printProcessList(Node *head)
+void ProcessList::printList()
 {
     Node *temp = head;
 
-    while (temp != NULL)
+    while (temp->next != head)
     {
-        cout<<temp->next<<endl;
+        temp->p.printProcess();
         temp = temp->next;
     }
+    temp->p.printProcess();
 }

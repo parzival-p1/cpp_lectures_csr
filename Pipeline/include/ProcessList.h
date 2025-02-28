@@ -22,7 +22,7 @@ class ProcessList
         bool isEmpty();
         Node *pop();
         void push(Node *newNode);
-        void printProcessList(Node *head);
+        void printList();
 
     private:
         Node *head;

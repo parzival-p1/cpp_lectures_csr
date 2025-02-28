@@ -6,8 +6,20 @@ Process::Process()
     pid = monte_carlo_sample() * 10000;
 
     fileName = "assembly" + to_string(id) + ".txt";
-    cout<<"pid: "<<pid<<" "<<fileName<<endl;
-    //decoder = new Decoder(sFileName);
+    cout<<"Creando proceso con pid: "<<pid<<" "<<fileName<<endl;
+    decoder = new Decoder(fileName);
+
+    if (decoder->start(List)) {
+        active = true;
+        instructionCount = List.GetInstructionCount();
+    }
+    else
+        cout<<"ERROR al leer el archivo para el proceso "<<pid<<endl;
+}
+
+Process::~Process()
+{
+    delete decoder;
 }
 
 // Función de densidad f(x) = 2x en [0,1]
@@ -41,8 +53,10 @@ double Process::monte_carlo_sample() {
 /* imprima los daatos del proceso: pid, activo, instrucciones */
 void Process::printProcess()
 {
-    Process p;
-    cout<<"PID: "<<p.Getpid()<<endl;
-    cout<<"Active: "<<p.Getactive()<<endl;
-    cout<<"Instruction: "<<p.GetinstructionCount()<<endl;
+    cout<<"PID: "<<pid<<endl;
+    if (active)
+        cout<<"Status: Active"<<endl;
+    else
+        cout<<"Status: Inactive"<<endl;
+    cout<<"Instruction count: "<<instructionCount<<endl;
 }

@@ -109,13 +109,13 @@
 	<iostream>
 	"Simulator.h"
 
-1740107048 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\simulator.h
+1740713688 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\simulator.h
 	"Decoder.h"
 	<iostream>
 	<string>
-	"Definitions.h"
 	"Alu.h"
-	"process.h"
+	"Process.h"
+	"ProcessList.h"
 
 1724377360 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\decoder.h
 	<iostream>
@@ -124,7 +124,7 @@
 	<sstream>
 	"InstLinkedList.h"
 
-1736221153 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\instlinkedlist.h
+1740712075 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\instlinkedlist.h
 	"Instruction.h"
 	"Alu.h"
 	"Definitions.h"
@@ -134,7 +134,8 @@
 	<string>
 	"Definitions.h"
 
-1736472971 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\definitions.h
+1740713877 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\definitions.h
+	<iostream>
 
 1736220981 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\alu.h
 	<iostream>
@@ -153,23 +154,27 @@
 1736220364 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\instruction.cpp
 	"Instruction.h"
 
-1740621605 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
+1740710785 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
 
-1740621698 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
+1740713393 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
 	<iostream>
 	<string>
 	<cstdlib>
 	<ctime>
 	<windows.h>
+	"Definitions.h"
+	"InstLinkedList.h"
+	"Decoder.h"
+	"Alu.h"
 
-1740621551 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\process.cpp
+1740709888 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\process.cpp
 	"Process.h"
 
-1740614850 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\processlist.cpp
+1740710555 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\processlist.cpp
 	"ProcessList.h"
 
-1740614222 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\processlist.h
+1740710541 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\processlist.h
 	<iostream>
 	"Process.h"
 	<string>

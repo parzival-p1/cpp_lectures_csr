@@ -17,14 +17,14 @@ Simulator::~Simulator()
 
 void Simulator::runTest()
 {
-    Process pr;
     srand(time(NULL));
 
-    for (int i = 0; i < 10; i++)
+    for (int i = 0; i < 3; i++)
     {
-        Process p;
+        Node *n = new Node;
+        Exec.push(n);
     }
-    pr.printProcess();
+    Exec.printList();
 }
 
 void Simulator::run()

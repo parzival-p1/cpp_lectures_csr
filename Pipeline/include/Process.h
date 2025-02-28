@@ -5,6 +5,10 @@
 #include <cstdlib>
 #include <ctime>
 #include <windows.h>
+#include "Definitions.h"
+#include "InstLinkedList.h"
+#include "Decoder.h"
+#include "Alu.h"
 
 using namespace std;
 
@@ -26,7 +30,9 @@ class Process
         int pid;
         string fileName;
         int instructionCount;
+        InstructionList List;
         bool active;
+
         double f(double x);
         double random_uniform();
         double monte_carlo_sample();

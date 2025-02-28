@@ -3,6 +3,7 @@
 InstructionList::InstructionList()
 {
     head = NULL;
+    instructionCount = 0;
 }
 
 InstructionList::~InstructionList()
@@ -31,6 +32,7 @@ void InstructionList::insertLast(Instruction *newNode)
         temp->SetNext(newNode);
         newNode->SetPrev(temp);
     }
+    instructionCount++;
 }
 
 void InstructionList::deleteBegin()

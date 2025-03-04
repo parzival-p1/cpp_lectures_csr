@@ -117,11 +117,8 @@ bool Decoder::start(InstructionList &List)
         {
             iCount = wordCount(sLine);
 
-            if (validComand(List, sLine, iCount)) {
-                cout<<"El comando fue valido: "<<sLine<<endl;
-            }
-
-            else {
+            if (!validComand(List, sLine, iCount))
+            {
                 cout<<"El comando no existe o hay un error de sintaxis: "<<sLine<<endl;
                 bError = false;
             }

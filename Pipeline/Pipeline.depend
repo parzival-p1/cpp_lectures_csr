@@ -109,7 +109,7 @@
 	<iostream>
 	"Simulator.h"
 
-1740713688 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\simulator.h
+1741055933 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\simulator.h
 	"Decoder.h"
 	<iostream>
 	<string>
@@ -129,12 +129,12 @@
 	"Alu.h"
 	"Definitions.h"
 
-1736221643 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\instruction.h
+1741053472 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\instruction.h
 	<iostream>
 	<string>
 	"Definitions.h"
 
-1740713877 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\definitions.h
+1741053409 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\definitions.h
 	<iostream>
 
 1736220981 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\alu.h
@@ -157,7 +157,7 @@
 1740710785 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\simulator.cpp
 	"Simulator.h"
 
-1740713393 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
+1741055987 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\process.h
 	<iostream>
 	<string>
 	<cstdlib>
@@ -174,10 +174,73 @@
 1740710555 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\src\processlist.cpp
 	"ProcessList.h"
 
-1740710541 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\processlist.h
+1741056382 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\include\processlist.h
 	<iostream>
 	"Process.h"
 	<string>
 	<cstdlib>
 	<windows.h>
+
+1740103909 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\alu.cpp
+	"Alu.h"
+
+1736220981 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\alu.h
+	<iostream>
+	<string>
+	"Definitions.h"
+
+1741058325 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\definitions.h
+	<iostream>
+
+1741057854 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\decoder.cpp
+	"Decoder.h"
+
+1741058511 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\decoder.h
+	<fstream>
+	<sstream>
+	"InstLinkedList.h"
+
+1741058433 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\instlinkedlist.h
+	"Instruction.h"
+	"Alu.h"
+
+1741053472 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\instruction.h
+	<iostream>
+	<string>
+	"Definitions.h"
+
+1741053033 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\definitions.cpp
+	"Definitions.h"
+
+1740712196 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\instlinkedlist.cpp
+	"InstLinkedList.h"
+
+1736220364 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\instruction.cpp
+	"Instruction.h"
+
+1741058127 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\simulator.h
+	<iostream>
+	<string>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+	"ProcessList.h"
+
+1741058216 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\process.h
+	"Definitions.h"
+	"InstLinkedList.h"
+	"Decoder.h"
+	"Alu.h"
+
+1741058176 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\processlist.h
+	"Process.h"
+
+1741057931 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\processlist.cpp
+	"ProcessList.h"
+
+1741055850 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\simulator.cpp
+	"Simulator.h"
+
+1741057640 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\pipeline\process.cpp
+	"Process.h"
 

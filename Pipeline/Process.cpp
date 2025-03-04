@@ -5,13 +5,15 @@ Process::Process()
     int id = monte_carlo_sample() * 10;
     pid = monte_carlo_sample() * 10000;
 
-    fileName = "assembly" + to_string(id) + ".txt";
+    fileName = "process/assembly" + to_string(id) + ".txt";
     cout<<"Creando proceso con pid: "<<pid<<" "<<fileName<<endl;
     decoder = new Decoder(fileName);
 
-    if (decoder->start(List)) {
+    if (decoder->start(List))
+    {
         active = true;
         instructionCount = List.GetInstructionCount();
+        cpuReg.cleanRegisters();
     }
     else
         cout<<"ERROR al leer el archivo para el proceso "<<pid<<endl;
@@ -59,4 +61,15 @@ void Process::printProcess()
     else
         cout<<"Status: Inactive"<<endl;
     cout<<"Instruction count: "<<instructionCount<<endl;
+}
+
+// Debe recibir x cantidad de instrucciones para rr
+void Process::execute()
+{
+    while (!List.instEndState())
+    {
+        List.changeInstructionState();
+        List.print(myAlu, cpuReg);
+        cin.ignore(); // cada ve que se presione enter = ciclo de reloj
+    }
 }

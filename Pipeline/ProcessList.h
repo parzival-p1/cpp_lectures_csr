@@ -1,10 +1,6 @@
 #ifndef PROCESSLIST_H
 #define PROCESSLIST_H
-#include <iostream>
 #include "Process.h"
-#include <string>
-#include <cstdlib>
-#include <windows.h>
 
 using namespace std;
 
@@ -20,9 +16,10 @@ class ProcessList
         ProcessList();
         ~ProcessList();
         bool isEmpty();
-        Node *pop();
-        void push(Node *newNode);
+        Node *lPop();
+        void lPush(Node *newNode);
         void printList();
+        void createNode();
 
     private:
         Node *head;

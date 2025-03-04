@@ -45,6 +45,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Alu.cpp" />
 		<Unit filename="src/Decoder.cpp" />
+		<Unit filename="src/Definitions.cpp" />
 		<Unit filename="src/InstLinkedList.cpp" />
 		<Unit filename="src/Instruction.cpp" />
 		<Unit filename="src/Process.cpp" />

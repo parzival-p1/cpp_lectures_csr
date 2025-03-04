@@ -7,6 +7,9 @@
 
 using namespace std;
 
+// Init = Inicio, IF = Instruction Fetch, ID = Instruction Decode, EX = Execute, MEM = Memory, WB = Write back, CO = Commit, END = Final
+enum STATUS { INIT, IF, ID, EX, MEM, WB, CO, END };
+
 class Instruction
 {
     public:

@@ -1,10 +1,6 @@
 #ifndef PROCESS_H
 #define PROCESS_H
-#include <iostream>
-#include <string>
-#include <cstdlib>
-#include <ctime>
-#include <windows.h>
+
 #include "Definitions.h"
 #include "InstLinkedList.h"
 #include "Decoder.h"
@@ -16,6 +12,7 @@ class Process
 {
     public:
         Process();
+        ~Process();
 
         int Getpid() { return pid; }
         int GetinstructionCount() { return instructionCount; }
@@ -23,6 +20,7 @@ class Process
         void Setactive(bool val) { active = val; }
         // T A R E A hacer la funcion que imprima los daatos del proceso: pid, activo, instrucciones
         void printProcess();
+        void execute();
 
     protected:
 
@@ -30,13 +28,16 @@ class Process
         int pid;
         string fileName;
         int instructionCount;
-        InstructionList List;
+        InstructionList List; // esto es una instancia
+        Registers cpuReg; // aqui se esta creando el objeto
         bool active;
+        Decoder *decoder;
+        Alu myAlu; // aqui se crea el obj
+
 
         double f(double x);
         double random_uniform();
         double monte_carlo_sample();
-
 };
 
 #endif // PROCESS_H

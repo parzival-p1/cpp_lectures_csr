@@ -2,7 +2,6 @@
 #define INSTRUCTIONLIST_H
 #include "Instruction.h"
 #include "Alu.h"
-#include "Definitions.h"
 
 using namespace std;
 

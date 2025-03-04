@@ -1,9 +1,7 @@
 #ifndef DECODER_H
 #define DECODER_H
 
-#include <iostream>
 #include <fstream>
-#include <string>
 #include <sstream>
 #include "InstLinkedList.h"
 

@@ -111,6 +111,10 @@ bool InstructionList::instEndState ()
     }
 }
 
+// T A R E A: en pseudo que tendria que mover en esta funcion para que ejecute X cantidad de instrucciones; IDEAS
+// Leer que hace Instruction e InstructionList, para saber que esta pasando
+// Solucion por pasos y lo que se neceista, variables, modificar whiles
+
 void InstructionList::changeInstructionState()
 {
     Instruction *temp = head;

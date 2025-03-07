@@ -20,10 +20,14 @@ class ProcessList
         void lPush(Node *newNode);
         void printList();
         void createNode();
+        int GetProcessCount() { return processCount; }
+        Node *executeProcess();
 
     private:
         Node *head;
         Node *tail;
+        int processCount;
+        int maxInstructions;
 };
 
 #endif // PROCESSLIST_H

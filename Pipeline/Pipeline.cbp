@@ -34,23 +34,23 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Alu.h" />
-		<Unit filename="include/Decoder.h" />
-		<Unit filename="include/Definitions.h" />
-		<Unit filename="include/InstLinkedList.h" />
-		<Unit filename="include/Instruction.h" />
-		<Unit filename="include/Process.h" />
-		<Unit filename="include/ProcessList.h" />
-		<Unit filename="include/Simulator.h" />
+		<Unit filename="Alu.cpp" />
+		<Unit filename="Alu.h" />
+		<Unit filename="Decoder.cpp" />
+		<Unit filename="Decoder.h" />
+		<Unit filename="Definitions.cpp" />
+		<Unit filename="Definitions.h" />
+		<Unit filename="InstLinkedList.cpp" />
+		<Unit filename="InstLinkedList.h" />
+		<Unit filename="Instruction.cpp" />
+		<Unit filename="Instruction.h" />
+		<Unit filename="Process.cpp" />
+		<Unit filename="Process.h" />
+		<Unit filename="ProcessList.cpp" />
+		<Unit filename="ProcessList.h" />
+		<Unit filename="Simulator.cpp" />
+		<Unit filename="Simulator.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Alu.cpp" />
-		<Unit filename="src/Decoder.cpp" />
-		<Unit filename="src/Definitions.cpp" />
-		<Unit filename="src/InstLinkedList.cpp" />
-		<Unit filename="src/Instruction.cpp" />
-		<Unit filename="src/Process.cpp" />
-		<Unit filename="src/ProcessList.cpp" />
-		<Unit filename="src/Simulator.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

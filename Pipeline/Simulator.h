@@ -17,6 +17,7 @@ class Simulator
         ~Simulator();
         void run();
         void runTest();
+        void createProcesses();
 
     protected:
 

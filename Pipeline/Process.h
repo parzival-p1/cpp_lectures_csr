@@ -20,7 +20,7 @@ class Process
         void Setactive(bool val) { active = val; }
         // T A R E A hacer la funcion que imprima los daatos del proceso: pid, activo, instrucciones
         void printProcess();
-        void execute();
+        bool execute(int maxInstructions);
 
     protected:
 

@@ -6,7 +6,7 @@ Process::Process()
     pid = monte_carlo_sample() * 10000;
 
     fileName = "process/assembly" + to_string(id) + ".txt";
-    cout<<"Creando proceso con pid: "<<pid<<" "<<fileName<<endl;
+    // cout<<"Creando proceso con pid: "<<pid<<" "<<fileName<<endl;
     decoder = new Decoder(fileName);
 
     if (decoder->start(List))
@@ -39,13 +39,14 @@ double Process::monte_carlo_sample() {
     double x, y;
     bool exit = false;
 
-    while (!exit) {
+    while (!exit)
+    {
         // Generamos un candidato x de la distribución uniforme g(x)
         x = random_uniform();
         // Generamos un número y uniforme entre 0 y c (c=2 en este caso)
         y = random_uniform() * 2.0;
         // Si y está por debajo de f(x), aceptamos x
-        if (y <= f(x))
+        if (y <= f(x) && x >= 0.1)
             exit = true;
         // Sino, se repite el proceso
     }
@@ -55,16 +56,16 @@ double Process::monte_carlo_sample() {
 /* imprima los daatos del proceso: pid, activo, instrucciones */
 void Process::printProcess()
 {
-    cout<<"PID: "<<pid<<endl;
+    cout<<"PID: "<<pid;
     if (active)
-        cout<<"Status: Active"<<endl;
+        cout<<" -- Status: Active";
     else
-        cout<<"Status: Inactive"<<endl;
-    cout<<"Instruction count: "<<instructionCount<<endl;
+        cout<<" -- Status: Inactive";
+    cout<<" -- Instruction count: "<<instructionCount<<endl;
 }
 
 // Debe recibir x cantidad de instrucciones para rr
-void Process::execute()
+bool Process::execute(int maxInstructions)
 {
     while (!List.instEndState())
     {

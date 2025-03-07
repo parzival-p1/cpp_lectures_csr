@@ -4,6 +4,8 @@ Simulator::Simulator()
 {
     //ctor
     iClockCounter = 0; // cuenta los ciclos de reloj, por cada ciclo de reloj = ciclo de while
+    srand(time(NULL));
+
 }
 
 Simulator::~Simulator()
@@ -13,13 +15,21 @@ Simulator::~Simulator()
 
 void Simulator::runTest()
 {
-    srand(time(NULL));
+    int processes;
+    char keepRunning = 'y';
 
-    for (int i = 0; i < 3; i++)
+    createProcesses();
+
+    while (Exec.GetProcessCount() > 0 && keepRunning == 'y')
     {
-        Exec.createNode();
+        Exec.printList();
+        processes = rand() % 10;
+
+        if (processes == 7)
+            createProcesses();
+        cout<<"Continuar con el simulador (y / n): ";
+        cin>>keepRunning;
     }
-    Exec.printList();
 }
 
 void Simulator::run()
@@ -32,4 +42,14 @@ void Simulator::run()
     // myAlu.execute("CMP", "$IR", "$-40", cpuReg);
     // cout<<"\nIR: "<<cpuReg.IR<<endl;
     cout<<"Ocurrio un error"<<endl;
+}
+
+void Simulator::createProcesses()
+{
+    int a = 3 + rand() % 18;
+
+    for (int i = 0; i < a; i++)
+    {
+        Exec.createNode();
+    }
 }

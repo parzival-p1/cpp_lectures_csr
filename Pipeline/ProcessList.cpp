@@ -4,6 +4,8 @@ ProcessList::ProcessList()
 {
     head = NULL;
     tail = NULL;
+    processCount = 0;
+    maxInstructions = 3;
 }
 
 ProcessList::~ProcessList()
@@ -45,6 +47,7 @@ Node *ProcessList::lPop()
             head = temp->next;
             tail->next = head;
         }
+        processCount--;
         return temp;
     }
     else
@@ -65,11 +68,13 @@ void ProcessList::lPush(Node *newNode)
         tail = newNode;
         tail->next = head;
     }
+    processCount++;
 }
 
 void ProcessList::printList()
 {
     Node *temp = head;
+    cout<<"Process count: "<<processCount<<endl;
 
     while (temp->next != head)
     {
@@ -83,4 +88,16 @@ void ProcessList::createNode()
 {
     Node *newNode = new Node;
     lPush(newNode);
+}
+
+Node *ProcessList::executeProcess()
+{
+    Node *currentNode = lPop();
+
+    if(!isEmpty())
+    {
+        currentNode->p.execute();
+    }
+    else
+        return NULL;
 }

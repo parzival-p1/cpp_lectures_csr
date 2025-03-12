@@ -21,7 +21,7 @@ class InstructionList
         void print(Alu &alu, Registers &registers);
         Instruction *getNextNode(Instruction *currentNode);
         bool instEndState ();
-        void changeInstructionState();
+        void changeInstructionState(int maxInstructions);
         int GetInstructionCount(){ return instructionCount; }
 
     protected:

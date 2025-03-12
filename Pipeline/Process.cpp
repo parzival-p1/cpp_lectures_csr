@@ -69,7 +69,7 @@ bool Process::execute(int maxInstructions)
 {
     while (!List.instEndState())
     {
-        List.changeInstructionState();
+        List.changeInstructionState(maxInstructions);
         List.print(myAlu, cpuReg);
         cin.ignore(); // cada ve que se presione enter = ciclo de reloj
     }

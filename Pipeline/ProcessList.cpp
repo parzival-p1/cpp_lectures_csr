@@ -96,7 +96,7 @@ Node *ProcessList::executeProcess()
 
     if(!isEmpty())
     {
-        currentNode->p.execute();
+        currentNode->p.execute(maxInstructions);
     }
     else
         return NULL;

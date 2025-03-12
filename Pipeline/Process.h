@@ -34,7 +34,6 @@ class Process
         Decoder *decoder;
         Alu myAlu; // aqui se crea el obj
 
-
         double f(double x);
         double random_uniform();
         double monte_carlo_sample();

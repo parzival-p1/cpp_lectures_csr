@@ -115,7 +115,7 @@ bool InstructionList::instEndState ()
 // Leer que hace Instruction e InstructionList, para saber que esta pasando
 // Solucion por pasos y lo que se neceista, variables, modificar whiles
 
-void InstructionList::changeInstructionState()
+void InstructionList::changeInstructionState(bool addNodesToPipeline)
 {
     Instruction *temp = head;
 
@@ -130,5 +130,23 @@ void InstructionList::changeInstructionState()
             temp = temp->GetNext();
         }
     }
+    /*
+    variable de control
+        hacer otra funcion
+        modificar el while
+        partiria en 2 pasos el changeState
+
+        T A R E A: teniendo en mente la var de control bool addNotesToPipeline
+        Rehacer el codigo de la func changeInstructionState();
+
+        Si la variable de control addNotesToPipeline == false los nodos con INIT no deben cambiar su estado
+        sin embargo los nodos != de INIT si deben cambiar el estado,
+        si la variable de control addNotesToPipeline == true, el codigo debe funcionar igual (no debe cambiar nada)
+
+            I D E A S:
+        -
+        -
+        -
+    */
 }
 

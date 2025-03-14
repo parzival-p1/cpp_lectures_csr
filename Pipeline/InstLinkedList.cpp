@@ -4,6 +4,7 @@ InstructionList::InstructionList()
 {
     head = NULL;
     instructionCount = 0;
+    waitList = NULL;
 }
 
 InstructionList::~InstructionList()
@@ -67,6 +68,7 @@ void InstructionList::deleteAll()
     }
 }
 
+// Revisar despues de haber implementado waitList;
 void InstructionList::print(Alu &alu, Registers &registers)
 {
     bool bExecute;
@@ -76,7 +78,10 @@ void InstructionList::print(Alu &alu, Registers &registers)
        bExecute = aux->print();
        if (bExecute)
        {
-           alu.execute(aux->GetsOpcode(), aux->GetsSource(), aux->GetsDestination(), registers);
+           alu.execute(aux->GetsOpcode(),
+                       aux->GetsSource(),
+                       aux->GetsDestination(),
+                       registers);
        }
     }
 
@@ -115,7 +120,7 @@ bool InstructionList::instEndState ()
 // Leer que hace Instruction e InstructionList, para saber que esta pasando
 // Solucion por pasos y lo que se neceista, variables, modificar whiles
 
-void InstructionList::changeInstructionState(bool addNodesToPipeline)
+void InstructionList::changeInstructionState()
 {
     Instruction *temp = head;
 
@@ -130,23 +135,16 @@ void InstructionList::changeInstructionState(bool addNodesToPipeline)
             temp = temp->GetNext();
         }
     }
-    /*
-    variable de control
-        hacer otra funcion
-        modificar el while
-        partiria en 2 pasos el changeState
+}
 
-        T A R E A: teniendo en mente la var de control bool addNotesToPipeline
-        Rehacer el codigo de la func changeInstructionState();
+void InstructionList::configListToExecute(int maxInstructions)
+{
 
-        Si la variable de control addNotesToPipeline == false los nodos con INIT no deben cambiar su estado
-        sin embargo los nodos != de INIT si deben cambiar el estado,
-        si la variable de control addNotesToPipeline == true, el codigo debe funcionar igual (no debe cambiar nada)
+}
 
-            I D E A S:
-        -
-        -
-        -
-    */
+void InstructionList::resetList()
+{
+//1, eLIMINAR NODODS DE HEAD DELETE ALL();
+//2.
 }
 

@@ -21,14 +21,17 @@ class InstructionList
         void print(Alu &alu, Registers &registers);
         Instruction *getNextNode(Instruction *currentNode);
         bool instEndState ();
-        void changeInstructionState(int maxInstructions);
+        void changeInstructionState();
         int GetInstructionCount(){ return instructionCount; }
+        void configListToExecute(int maxInstructions);
+        void resetList();
 
     protected:
 
     private:
         Instruction *head;
         int instructionCount;
+        Instruction *waitList;
 };
 
 #endif // INSTRUCTIONLIST_H

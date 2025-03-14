@@ -67,10 +67,13 @@ void Process::printProcess()
 // Debe recibir x cantidad de instrucciones para rr
 bool Process::execute(int maxInstructions)
 {
+    List.configListToExecute(maxInstructions);
+
     while (!List.instEndState())
     {
-        List.changeInstructionState(maxInstructions);
+        List.changeInstructionState();
         List.print(myAlu, cpuReg);
         cin.ignore(); // cada ve que se presione enter = ciclo de reloj
     }
+    List.resetList();
 }

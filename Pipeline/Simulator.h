@@ -25,7 +25,7 @@ class Simulator
         string sFileName;
         int iClockCounter;
         ProcessList Exec;
-        ProcessList Done;
+        ProcessList Finished;
 };
 
 #endif // SIMULATOR_H

@@ -12,6 +12,9 @@ Simulator::~Simulator()
 {
     // dtor
 }
+/*
+ * @runTest: maneja la ejecucion de los procesos
+*/
 
 void Simulator::runTest()
 {
@@ -23,6 +26,13 @@ void Simulator::runTest()
     while (Exec.GetProcessCount() > 0 && keepRunning == 'y')
     {
         Exec.printList();
+        Finished.lPush(Exec.executeProcess());
+        cout<<"----- Procesos terminados -----"<<endl;
+        Finished.printList();
+
+        cout<<"----- Procesos en cola -----"<<endl;
+        Exec.printList();
+
         processes = rand() % 10;
 
         if (processes == 7)
@@ -32,6 +42,9 @@ void Simulator::runTest()
     }
 }
 
+/*
+ * @run: simula 1 ciclo de reloj para pruebas
+*/
 void Simulator::run()
 {
     cout<<"Iniciando el simulador"<<endl;
@@ -44,9 +57,13 @@ void Simulator::run()
     cout<<"Ocurrio un error"<<endl;
 }
 
+/*
+ * @createProcesses: genera procesos en cantidad aleatoria
+*/
+
 void Simulator::createProcesses()
 {
-    int a = 3 + rand() % 18;
+    int a = 1 + rand() % 4;
 
     for (int i = 0; i < a; i++)
     {

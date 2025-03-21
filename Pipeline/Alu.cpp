@@ -81,7 +81,7 @@ void Alu::execute(string sOpcode, string sSource, string sDestination, Registers
     if (sOpcode == "MOV")
     {
         assignValue(sSource, idestination, cpuReg);
-        cout<<"MOV command detected from "<<sSource<<" to "<<sDestination<<endl;
+        //cout<<"MOV command detected from "<<sSource<<" to "<<sDestination<<endl;
         //cpuReg.print();
     }
     else
@@ -114,7 +114,7 @@ void Alu::execute(string sOpcode, string sSource, string sDestination, Registers
             case 6: res = cmdCmp(isource, idestination); break; // caso 6: si validCmd en la posicion i es igual a "CMP" se mandara a llamar la funcion en el caso 6
         }
         cpuReg.IR = res;
-        cout<<sOpcode<<" command detected"<<endl;
+        //cout<<sOpcode<<" command detected"<<endl;
         //cpuReg.print();
     }
 }

@@ -84,8 +84,6 @@ void InstructionList::print(Alu &alu, Registers &registers)
                        registers);
        }
     }
-
-
 }
 
 Instruction *InstructionList::getNextNode(Instruction *currentNode)
@@ -139,12 +137,28 @@ void InstructionList::changeInstructionState()
 
 void InstructionList::configListToExecute(int maxInstructions)
 {
+    Instruction *temp = head;
+    int i = 1;
 
+    if (!isEmpty())
+    {
+        while (i < maxInstructions && temp != NULL)
+        {
+            i++;
+            temp = temp->GetNext();
+        }
+        if (temp == NULL)
+            waitList = NULL;
+        else
+        {
+            waitList = temp->GetNext();
+            temp->SetNext(NULL);
+        }
+    }
 }
 
 void InstructionList::resetList()
 {
-//1, eLIMINAR NODODS DE HEAD DELETE ALL();
-//2.
+    deleteAll();
+    head = waitList;
 }
-

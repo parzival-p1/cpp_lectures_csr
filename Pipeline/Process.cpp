@@ -1,5 +1,8 @@
 #include "Process.h"
 
+/*
+ * Process - represnta un proceso dentro dl sistema de simulacion
+*/
 Process::Process()
 {
     int id = monte_carlo_sample() * 10;
@@ -68,6 +71,7 @@ void Process::printProcess()
 bool Process::execute(int maxInstructions)
 {
     List.configListToExecute(maxInstructions);
+    cout<<"Max Instructions: "<<maxInstructions<<endl;
 
     while (!List.instEndState())
     {
@@ -76,4 +80,8 @@ bool Process::execute(int maxInstructions)
         cin.ignore(); // cada ve que se presione enter = ciclo de reloj
     }
     List.resetList();
+
+    if (List.isEmpty())
+        active = false;
+    return List.isEmpty();
 }

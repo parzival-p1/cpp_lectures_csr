@@ -56,19 +56,22 @@ Node *ProcessList::lPop()
 
 void ProcessList::lPush(Node *newNode)
 {
-    if (isEmpty())
+    if (newNode != NULL)
     {
-        head = newNode;
-        tail = newNode;
-        newNode->next = newNode;
+        if (isEmpty())
+        {
+            head = newNode;
+            tail = newNode;
+            newNode->next = newNode;
+        }
+        else
+        {
+            tail->next = newNode;
+            tail = newNode;
+            tail->next = head;
+        }
+        processCount++;
     }
-    else
-    {
-        tail->next = newNode;
-        tail = newNode;
-        tail->next = head;
-    }
-    processCount++;
 }
 
 void ProcessList::printList()
@@ -93,10 +96,18 @@ void ProcessList::createNode()
 Node *ProcessList::executeProcess()
 {
     Node *currentNode = lPop();
+    bool finished;
 
     if(!isEmpty())
     {
-        currentNode->p.execute(maxInstructions);
+        finished = currentNode->p.execute(maxInstructions);
+        if (finished)
+            return currentNode;
+        else
+        {
+            lPush(currentNode);
+            return NULL;
+        }
     }
     else
         return NULL;

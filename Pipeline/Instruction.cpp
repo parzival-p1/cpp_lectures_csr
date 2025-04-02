@@ -29,19 +29,19 @@ void Instruction::setAll(string sOpCode, string sSource, string sDestination, st
 void Instruction::printOperator()
 {
     // imprimir de manera directa.
-    cout<<sOpcode<<" "<<sSource<<" "<<sDestination<<" - State: "<<printState()<<endl;
+    cout<<"\t-- "<<sOpcode<<" "<<sSource<<" "<<sDestination<<" - State: "<<printState()<<endl;
 }
 
 void Instruction::printJump()
 {
     // imprimir de manera directa.
-    cout<<sOpcode<<" "<<sTag<<" - State: "<<printState()<<endl;
+    cout<<"\t-- "<<sOpcode<<" "<<sTag<<" - State: "<<printState()<<endl;
 }
 
 void Instruction::printTag()
 {
     // imprimir de manera directa.
-    cout<<sTag<<" - State: "<<printState()<<endl;
+    cout<<"\t-- "<<sTag<<" - State: "<<printState()<<endl;
 }
 
 bool Instruction::print()

@@ -1,7 +1,10 @@
 #ifndef INSTRUCTIONLIST_H
 #define INSTRUCTIONLIST_H
+
+
 #include "Instruction.h"
 #include "Alu.h"
+
 
 using namespace std;
 
@@ -23,17 +26,12 @@ class InstructionList
         bool instEndState ();
         void changeInstructionState();
         int GetInstructionCount(){ return instructionCount; }
-        int GetTotalCount(){ return totalCount; }
-        void configListToExecute(int maxInstructions);
-        void resetList();
 
     protected:
 
     private:
         Instruction *head;
         int instructionCount;
-        int totalCount;
-        Instruction *waitList;
 };
 
 #endif // INSTRUCTIONLIST_H

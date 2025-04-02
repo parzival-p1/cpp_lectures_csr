@@ -39,7 +39,9 @@ void Simulator::runTest()
             createProcesses();
         cout<<"Continuar con el simulador (y / n): ";
         cin>>keepRunning;
+        fflush(stdin);
     }
+
 }
 
 /*

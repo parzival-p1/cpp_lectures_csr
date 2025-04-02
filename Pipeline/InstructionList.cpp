@@ -1,11 +1,9 @@
-#include "InstLinkedList.h"
+#include "InstructionList.h"
 
 InstructionList::InstructionList()
 {
     head = NULL;
     instructionCount = 0;
-    waitList = NULL;
-    totalCount = 0;
 }
 
 InstructionList::~InstructionList()
@@ -35,7 +33,6 @@ void InstructionList::insertLast(Instruction *newNode)
         newNode->SetPrev(temp);
     }
     instructionCount++;
-    totalCount++;
 }
 
 void InstructionList::deleteBegin()
@@ -47,7 +44,6 @@ void InstructionList::deleteBegin()
         head = head->GetNext();
         head->SetPrev(NULL);
         delete temp;
-        instructionCount--;
     }
 }
 /* Otra manera de hacer deleteAll()
@@ -67,12 +63,10 @@ void InstructionList::deleteAll()
             head = head->GetNext();
             delete temp;
             temp = head;
-            instructionCount--;
         }
     }
 }
 
-// Revisar despues de haber implementado waitList;
 void InstructionList::print(Alu &alu, Registers &registers)
 {
     bool bExecute;
@@ -82,12 +76,11 @@ void InstructionList::print(Alu &alu, Registers &registers)
        bExecute = aux->print();
        if (bExecute)
        {
-           alu.execute(aux->GetsOpcode(),
-                       aux->GetsSource(),
-                       aux->GetsDestination(),
-                       registers);
+           alu.execute(aux->GetsOpcode(), aux->GetsSource(), aux->GetsDestination(), registers);
        }
     }
+
+
 }
 
 Instruction *InstructionList::getNextNode(Instruction *currentNode)
@@ -118,10 +111,6 @@ bool InstructionList::instEndState ()
     }
 }
 
-// T A R E A: en pseudo que tendria que mover en esta funcion para que ejecute X cantidad de instrucciones; IDEAS
-// Leer que hace Instruction e InstructionList, para saber que esta pasando
-// Solucion por pasos y lo que se neceista, variables, modificar whiles
-
 void InstructionList::changeInstructionState()
 {
     Instruction *temp = head;
@@ -139,30 +128,3 @@ void InstructionList::changeInstructionState()
     }
 }
 
-void InstructionList::configListToExecute(int maxInstructions)
-{
-    Instruction *temp = head;
-    int i = 1;
-
-    if (!isEmpty())
-    {
-        while (i < maxInstructions && temp != NULL)
-        {
-            i++;
-            temp = temp->GetNext();
-        }
-        if (temp == NULL)
-            waitList = NULL;
-        else
-        {
-            waitList = temp->GetNext();
-            temp->SetNext(NULL);
-        }
-    }
-}
-
-void InstructionList::resetList()
-{
-    deleteAll();
-    head = waitList;
-}

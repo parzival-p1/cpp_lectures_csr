@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1743563636 source:c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\hashtables\main.cpp
+	<iostream>
+	"Interface.h"
+
+1743563701 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\hashtables\interface.h
+	<iostream>
+	"Client.h"
+	"HashTable.h"
+
+1743563713 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\hashtables\client.h
+	<iostream>
+
+1743563728 c:\users\acer\documents\fco_hdzt\programming\cpp_lectures_csr\hashtables\hashtable.h
+	<iostream>
+	"Client.h"
+

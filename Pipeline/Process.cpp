@@ -64,24 +64,25 @@ void Process::printProcess()
         cout<<" -- Status: Active";
     else
         cout<<" -- Status: Inactive";
-    cout<<" -- Instruction count: "<<instructionCount<<endl;
+    cout<<" -- Total instruction count: "<<List.GetTotalCount()<<" -- Total instruction remaining: "<<List.GetInstructionCount()<<endl;
 }
 
 // Debe recibir x cantidad de instrucciones para rr
 bool Process::execute(int maxInstructions)
 {
     List.configListToExecute(maxInstructions);
-    cout<<"Max Instructions: "<<maxInstructions<<endl;
+    cout<<"\tExecuting PID: "<<pid<<endl;
 
     while (!List.instEndState())
     {
         List.changeInstructionState();
         List.print(myAlu, cpuReg);
-        cin.ignore(); // cada ve que se presione enter = ciclo de reloj
+        //cin.ignore(); // cada ve que se presione enter = ciclo de reloj
     }
     List.resetList();
 
     if (List.isEmpty())
         active = false;
+    fflush(stdin);
     return List.isEmpty();
 }

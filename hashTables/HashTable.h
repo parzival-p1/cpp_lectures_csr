@@ -47,14 +47,15 @@ void HashTable::Insert(Client c)
 
 void HashTable::Delete(Client c)
 {
-    //unsigned int key = getKey(c);
-    //clients[key] = ;
+    Client temp;
+    unsigned int key = getKey(c);
+    clients[key] = temp;
 }
 
 void HashTable::Search(Client c)
 {
     unsigned int key = getKey(c);
-    cout<<"El cliente se encontro en el indice: "<<key<<endl;
+    cout<<"\n\tEl cliente se encontro en el indice: "<<key<<endl;
 }
 
 void HashTable::printAll()

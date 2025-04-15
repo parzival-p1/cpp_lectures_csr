@@ -5,6 +5,7 @@ using namespace std;
 
 int main()
 {
+    /*
     Interface interface;
     interface.addClient();
     interface.printClients();
@@ -14,6 +15,8 @@ int main()
 
     interface.addClient();
     interface.printClients();
-
+    */
+    Interface inter;
+    inter.run();
     return 0;
 }
